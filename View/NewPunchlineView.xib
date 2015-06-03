@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-RC-7FG">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.27450980390000002" green="0.87843137250000003" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="76" id="Nfj-jf-XWA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                    <state key="normal" title="Photo">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Nfj-jf-XWA"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Nfj-jf-XWA"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-tq-G0a">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.27450980390000002" green="0.87843137250000003" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="76" id="KgK-1D-vlF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                    <state key="normal" title="Media">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="KgK-1D-vlF"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="KgK-1D-vlF"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DO2-HI-gv5">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.27450980390000002" green="0.87843137250000003" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="S43-ZA-ANw"/>
+                        <constraint firstAttribute="width" constant="96" id="jf2-Rn-07D"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                    <state key="normal" title="Google Image">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="S43-ZA-ANw"/>
+                            <exclude reference="jf2-Rn-07D"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="S43-ZA-ANw"/>
+                            <include reference="jf2-Rn-07D"/>
+                        </mask>
+                    </variation>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rr0-CE-6H0" customClass="SZTextView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="161" id="dwq-t3-klO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Vas y envoie !"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fadeTime">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="dwq-t3-klO"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="dwq-t3-klO"/>
+                        </mask>
+                    </variation>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AT4-RC-7FG" secondAttribute="bottom" constant="524" id="2Yv-Po-he4"/>
+                <constraint firstItem="W0b-tq-G0a" firstAttribute="top" secondItem="Rr0-CE-6H0" secondAttribute="bottom" constant="44" id="9dZ-rd-NBO"/>
+                <constraint firstItem="W0b-tq-G0a" firstAttribute="leading" secondItem="AT4-RC-7FG" secondAttribute="trailing" constant="36" id="Akh-B8-S4u"/>
+                <constraint firstItem="AT4-RC-7FG" firstAttribute="top" secondItem="Rr0-CE-6H0" secondAttribute="bottom" constant="44" id="KWN-ni-r94"/>
+                <constraint firstItem="AT4-RC-7FG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Rqi-Mb-Uug"/>
+                <constraint firstAttribute="bottom" secondItem="DO2-HI-gv5" secondAttribute="bottom" constant="524" id="Xvp-g8-gYd"/>
+                <constraint firstAttribute="bottom" secondItem="W0b-tq-G0a" secondAttribute="bottom" constant="524" id="g90-XR-Gtq"/>
+                <constraint firstItem="DO2-HI-gv5" firstAttribute="leading" secondItem="W0b-tq-G0a" secondAttribute="trailing" constant="37" id="gxg-0E-1q7"/>
+                <constraint firstAttribute="trailing" secondItem="DO2-HI-gv5" secondAttribute="trailing" constant="39" id="jDS-x8-6QY"/>
+                <constraint firstItem="DO2-HI-gv5" firstAttribute="top" secondItem="Rr0-CE-6H0" secondAttribute="bottom" constant="44" id="kIB-Jd-6yH"/>
+                <constraint firstItem="Rr0-CE-6H0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="reV-lq-cDB"/>
+                <constraint firstAttribute="trailing" secondItem="Rr0-CE-6H0" secondAttribute="trailing" constant="27" id="uY9-Bp-pRv"/>
+                <constraint firstItem="Rr0-CE-6H0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="41" id="zWg-ue-3Me"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="AT4-RC-7FG"/>
+                    <exclude reference="W0b-tq-G0a"/>
+                    <exclude reference="DO2-HI-gv5"/>
+                    <exclude reference="Rr0-CE-6H0"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="reV-lq-cDB"/>
+                    <exclude reference="uY9-Bp-pRv"/>
+                    <exclude reference="zWg-ue-3Me"/>
+                    <exclude reference="2Yv-Po-he4"/>
+                    <exclude reference="KWN-ni-r94"/>
+                    <exclude reference="Rqi-Mb-Uug"/>
+                    <exclude reference="9dZ-rd-NBO"/>
+                    <exclude reference="Akh-B8-S4u"/>
+                    <exclude reference="g90-XR-Gtq"/>
+                    <exclude reference="Xvp-g8-gYd"/>
+                    <exclude reference="gxg-0E-1q7"/>
+                    <exclude reference="jDS-x8-6QY"/>
+                    <exclude reference="kIB-Jd-6yH"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="AT4-RC-7FG"/>
+                    <include reference="W0b-tq-G0a"/>
+                    <include reference="DO2-HI-gv5"/>
+                    <include reference="Rr0-CE-6H0"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="reV-lq-cDB"/>
+                    <include reference="uY9-Bp-pRv"/>
+                    <include reference="zWg-ue-3Me"/>
+                    <include reference="2Yv-Po-he4"/>
+                    <include reference="KWN-ni-r94"/>
+                    <include reference="Rqi-Mb-Uug"/>
+                    <include reference="9dZ-rd-NBO"/>
+                    <include reference="Akh-B8-S4u"/>
+                    <include reference="g90-XR-Gtq"/>
+                    <include reference="Xvp-g8-gYd"/>
+                    <include reference="gxg-0E-1q7"/>
+                    <include reference="jDS-x8-6QY"/>
+                    <include reference="kIB-Jd-6yH"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

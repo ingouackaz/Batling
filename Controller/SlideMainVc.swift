@@ -17,19 +17,34 @@ class SlideMainVc: AMSlideMenuMainViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
      //   self.navigationController?.navigationBar.titleTextAttributes = titleDict
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showSideMenu", name: "showSideMenu", object: nil)
+        BatlingSingleton.sharedInstance._firstAppear = true
+         BatlingSingleton.sharedInstance._seletectedMenuIndex = -1
+        
+    }
+    
+    func showSideMenu(){
+        self.openLeftMenu()
     }
     
     override func segueIdentifierForIndexPathInLeftMenu(indexPath: NSIndexPath!) -> String! {
         
-        switch (indexPath.section)
+        
+        switch (indexPath.row)
         {
         case 0:
-            return "selection"
             
+                BatlingSingleton.sharedInstance._seletectedMenuIndex = 0
+
+            return "selection"
+        case 1:
+                BatlingSingleton.sharedInstance._seletectedMenuIndex = 1
+    
+            
+            return "selection"
+
         default:
-       //     self._foodchain.clearUser()
             return "backHome"
-            // do nothing
         }
         
     }
@@ -58,8 +73,14 @@ class SlideMainVc: AMSlideMenuMainViewController {
        button.setImage(UIImage(named: "list"), forState: UIControlState.Normal)
         button.tintColor = UIColor.whiteColor()
 
+        
     }
     
+    
+    override func closeLeftMenuAnimated(animated: Bool) {
+        
+        super.closeLeftMenuAnimated(animated)
+    }
     override func configureSlideLayer(layer: CALayer!) {
         
         layer.shadowColor = UIColor.blackColor().CGColor;

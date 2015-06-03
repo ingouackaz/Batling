@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ProfileVC: UIViewController , UITableViewDataSource, UITableViewDelegate{
+class ProfileVC: UIViewController , UITableViewDataSource, UITableViewDelegate, BarCellDelegate{
 
     var _activityButton: UIButton!
     var _batsButton: UIButton!
+    var _isInActivity : Bool = true
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -26,20 +27,30 @@ class ProfileVC: UIViewController , UITableViewDataSource, UITableViewDelegate{
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
         // Do any additional setup after loading the view.
+        
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
     }
-    @IBAction func batsButtonPressed(sender: AnyObject) {
-        _activityButton.selected = false
-        _batsButton.selected = true
+    
+    func batsButtonPressed(cell: BarCell) {
+
+       // cell.batsButton.selected = true
+      //  cell.activityButton.selected = false
+        self.tableView.reloadData()
+
+        _isInActivity = false
+    }
+
+    func activityButtonPressed(cell: BarCell) {
+        self.tableView.reloadData()
+      //  cell.activityButton.selected = true
+      //  cell.batsButton.selected = false
+
+        _isInActivity = true
     }
     
-    @IBAction func activityButtonPressed(sender: AnyObject) {
-        _activityButton.selected = true
-        _batsButton.selected = false
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -51,7 +62,12 @@ class ProfileVC: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-      return 1
+        if(section == 2){
+            return 4
+        }
+        else {
+            return 1
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -59,45 +75,62 @@ class ProfileVC: UIViewController , UITableViewDataSource, UITableViewDelegate{
         
         if(indexPath.section == 0){
             var cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell", forIndexPath: indexPath) as! UITableViewCell
+
             return cell
-        
         }
         else if (indexPath.section == 1){
             var cell = tableView.dequeueReusableCellWithIdentifier("BarCell", forIndexPath: indexPath) as! BarCell
-            
-            var origin = cell.activityButton!.frame.origin
-            
-            origin.x = 0
-            cell.activityButton!.frame = CGRect(origin:origin, size: CGSize(width: 400, height: 400))
-            cell.layoutMargins = UIEdgeInsetsZero;
-            cell.preservesSuperviewLayoutMargins = false;
+            cell.configureCell()
+            cell.activityButton.selected = _isInActivity
+            cell.batsButton.selected = !_isInActivity
+            cell.delegate = self
             return cell
         }
         else {
-            if ((indexPath.row % 2) != 0){
-                var cell = tableView.dequeueReusableCellWithIdentifier("CellText", forIndexPath: indexPath) as! FeedTextCell
-                
-                cell.batLabel.text = "okdpoekopdkskposdkpozkdpozekdpozeskdoizsjdozdozsedoizesdoizejdoizjsediojszeoidjzseoidjzseoidjzseoijdzsoijdzsoijdozsiejdposzedjposedp0d0pwù9dùpkswopsùkawùposkùaiwdùaujspoùwjasùjaskpoùakspùoakspoùka"
-                return cell
+            
+            if (_isInActivity == true){
+                return self.configureActivityCells(indexPath)
             }
             else {
-                var cell = tableView.dequeueReusableCellWithIdentifier("CellImage", forIndexPath: indexPath) as! FeedImageCell
-                
-                var origin = cell.pictureImageView!.frame.origin
-                
-                origin.x = 0
-                cell.pictureImageView!.frame = CGRect(origin:origin, size: CGSize(width: 400, height: 400))
-                cell.layoutMargins = UIEdgeInsetsZero;
-                cell.preservesSuperviewLayoutMargins = false;
-                
-                
-                return cell
-                
+                return configureBatsCells(indexPath)
             }
         }
         
+    }
+    
+    func shareAction(){
         
+        
+        let myView = NSBundle.mainBundle().loadNibNamed("ShareView", owner: nil, options: nil)[0] as! UIView
+        
+        
+        var popup : KLCPopup = KLCPopup(contentView: myView)
+        popup.show()
+        
+    }
+    
+    
+    func configureBatsCells(indexPath: NSIndexPath) -> UITableViewCell{
+        if ((indexPath.row % 2) != 0){
+            var cell = tableView.dequeueReusableCellWithIdentifier("CellText", forIndexPath: indexPath) as! FeedTextCell
+            cell.shareButton.addTarget(self, action: "shareAction", forControlEvents: UIControlEvents.TouchUpInside)
 
+            cell.batLabel.text = "okdpoe"
+            return cell
+        }
+        else {
+            var cell = tableView.dequeueReusableCellWithIdentifier("CellImage", forIndexPath: indexPath) as! FeedImageCell
+            cell.shareButton.addTarget(self, action: "shareAction", forControlEvents: UIControlEvents.TouchUpInside)
+
+            cell.configureCell()
+            return cell
+        }
+    }
+    
+    func configureActivityCells(indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("ActivityCell", forIndexPath: indexPath) as! ActivityCell
+        
+        return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

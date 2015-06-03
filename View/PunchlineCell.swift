@@ -1,5 +1,5 @@
 //
-//  FeedTextCell.swift
+//  PunchlineCell.swift
 //  Batling
 //
 //  Created by Ingouackaz on 2015-05-30.
@@ -8,15 +8,11 @@
 
 import UIKit
 
-class FeedTextCell: UITableViewCell {
+class PunchlineCell: UITableViewCell {
 
-    @IBOutlet weak var batLabel: UILabel!
-    @IBOutlet weak var shareButton: UIButton!
-    
+    @IBOutlet weak var punchlineTextView: SZTextView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        batLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping // Label outlet
-        batLabel.numberOfLines = 0
         // Initialization code
     }
 
@@ -24,10 +20,6 @@ class FeedTextCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-
-    func configureCell(){
-        
     }
 
 }

@@ -59,8 +59,30 @@ class BatlingTBVC: UITabBarController , UITabBarControllerDelegate{
     }
     
     func batAction(){
-        self.selectedIndex = 2
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        var BatVc = storyboard.instantiateViewControllerWithIdentifier("batNC") as! UINavigationController
+        
+        self.presentViewController(BatVc, animated: true, completion: nil)
+       // self.selectedIndex = 1
     
+    
+    }
+    
+    
+    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        if(viewController.title == "newBatVC"){
+            return false
+        }
+        else{
+            return true
+        }
+    
+    }
+    
+    @IBAction func unwindToTBVC(segue: UIStoryboardSegue) {
+        
     }
 
 /*
@@ -92,29 +114,9 @@ class BatlingTBVC: UITabBarController , UITabBarControllerDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
-        /*
-        if(viewController.title == "CameraNC" && _photoTaken == false){
-            var cameraNC = TGCameraNavigationController.newWithCameraDelegate(self)
-            self.presentViewController(cameraNC, animated: true, completion: nil)
-            
-            return false
-        }
-        else{
-            _photoTaken = false
 
-            return true
-        }*/
-        return true
 
-    }
 
-    func cameraDidCancel() {
-        self.dismissViewControllerAnimated(true, completion: nil)
-        self.selectedIndex = 0
-    }
-    
 
     
     func cameraDidSavePhotoWithError(error: NSError!) {

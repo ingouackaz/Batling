@@ -16,8 +16,11 @@ class BatlingSingleton {
     var _homeCacheThumbImage : [FeedImageCell:UIImage] = [FeedImageCell:UIImage]()
     var _homeCacheThumbImageIndexPath : [String:UIImage] = [String:UIImage]()
 
+    var _seletectedMenuIndex : Int = -1
  //   var _outstandingSectionHeaderQueries : [FeedCell:PFObject] = [FeedCell:PFObject]()
     var _FeedCellHeight : CGFloat = 520
+    
+    var _firstAppear : Bool = true
     
     init() {
         var iOSDeviceScreenSize : CGSize = UIScreen.mainScreen().bounds.size

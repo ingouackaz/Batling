@@ -59,6 +59,35 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate, AMSl
         
     }
     
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (BatlingSingleton.sharedInstance._seletectedMenuIndex == 0){
+            BatlingSingleton.sharedInstance._seletectedMenuIndex = -1
+            var BatVc = self.storyboard?.instantiateViewControllerWithIdentifier("helpNC") as! UINavigationController
+            
+            self.presentViewController(BatVc, animated: true, completion: nil)
+        }
+        else if (BatlingSingleton.sharedInstance._seletectedMenuIndex == 1){
+            
+            BatlingSingleton.sharedInstance._seletectedMenuIndex = -1
+            var BatVc = self.storyboard?.instantiateViewControllerWithIdentifier("contactNC") as! UINavigationController
+            
+            self.presentViewController(BatVc, animated: true, completion: nil)
+        }
+        else{
+        
+        }
+        
+        
+    }
+    @IBAction func showSideMenu(sender: AnyObject) {
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("showSideMenu", object: nil)
+        
+    }
+    
     @IBAction func popularButtonPressed(sender: AnyObject) {
         
         popularButton.selected = true
@@ -96,6 +125,8 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate, AMSl
         if ((indexPath.row % 2) != 0){
         var cell = tableView.dequeueReusableCellWithIdentifier("CellText", forIndexPath: indexPath) as! FeedTextCell
         
+           cell.shareButton.addTarget(self, action: "shareAction", forControlEvents: UIControlEvents.TouchUpInside)
+
         cell.batLabel.text = "okdpoekopdkskposdkpozkdpozekdpozeskdoizsjdozdozsedoizesdoizejdoizjsediojszeoidjzseoidjzseoidjzseoijdzsoijdzsoijdozsiejdposzedjposedp0d0pwù9dùpkswopsùkawùposkùaiwdùaujspoùwjasùjaskpoùakspùoakspoùka"
         return cell
         }
@@ -109,12 +140,24 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate, AMSl
         cell.layoutMargins = UIEdgeInsetsZero;
         cell.preservesSuperviewLayoutMargins = false;
         
-        
+        cell.shareButton.addTarget(self, action: "shareAction", forControlEvents: UIControlEvents.TouchUpInside)
+
         return cell
 
         }
 
                 
+    }
+    
+    func shareAction(){
+        
+        
+        let myView = NSBundle.mainBundle().loadNibNamed("ShareView", owner: nil, options: nil)[0] as! UIView
+
+
+        var popup : KLCPopup = KLCPopup(contentView: myView)
+        popup.show()
+        
     }
     
     

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="227"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareview" translatesAutoresizingMaskIntoConstraints="NO" id="tCy-X6-Ikp">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="227"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkO-Po-UaJ">
+                    <rect key="frame" x="8" y="42" width="80" height="68"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="ELs-Zz-2Vd"/>
+                        <constraint firstAttribute="width" constant="80" id="elH-HV-7d9"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tCy-X6-Ikp" firstAttribute="leading" secondItem="gkO-Po-UaJ" secondAttribute="trailing" constant="-88" id="0f3-eF-grM"/>
+                <constraint firstItem="tCy-X6-Ikp" firstAttribute="top" secondItem="gkO-Po-UaJ" secondAttribute="bottom" constant="-110" id="TCi-W6-aCG"/>
+                <constraint firstItem="tCy-X6-Ikp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="q1n-ZR-kaW"/>
+                <constraint firstItem="tCy-X6-Ikp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sUX-B6-tzT"/>
+                <constraint firstAttribute="trailing" secondItem="tCy-X6-Ikp" secondAttribute="trailing" id="shJ-8s-E9e"/>
+                <constraint firstAttribute="bottom" secondItem="tCy-X6-Ikp" secondAttribute="bottom" id="x49-SH-4wq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="325" y="327.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="shareview" width="1201" height="910"/>
+    </resources>
+</document>
