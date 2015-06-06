@@ -55,7 +55,6 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
-            <string>Lato-Regular</string>
         </mutableArray>
         <mutableArray key="Lato-Semibold.ttf">
             <string>Lato-Semibold</string>
@@ -133,7 +132,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mKV-1o-TdE" id="fml-Cb-eTX">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k3Y-E8-CDW">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k3Y-E8-CDW">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
@@ -181,7 +180,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="knH-ny-Gcf" id="QsB-tT-ZCy">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirmation mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POu-Td-abU">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POu-Td-abU">
                                                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
@@ -219,6 +218,54 @@
                                                     <include reference="SgT-ye-h22"/>
                                                     <include reference="tYP-5w-L58"/>
                                                     <include reference="y6I-Jk-3Ij"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="saL-Rd-E9H">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="saL-Rd-E9H" id="Bnh-Oz-ttx">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirmation mot de passe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Blw-nJ-KFN">
+                                                    <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                            <color key="value" red="1" green="1" blue="1" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Blw-nJ-KFN" secondAttribute="centerY" id="8Yo-gh-nFz"/>
+                                                <constraint firstItem="Blw-nJ-KFN" firstAttribute="leading" secondItem="Bnh-Oz-ttx" secondAttribute="leadingMargin" constant="27" id="KO3-w8-2Cg"/>
+                                                <constraint firstItem="Blw-nJ-KFN" firstAttribute="top" secondItem="Bnh-Oz-ttx" secondAttribute="topMargin" constant="4" id="KbJ-ut-ynf"/>
+                                                <constraint firstAttribute="centerX" secondItem="Blw-nJ-KFN" secondAttribute="centerX" id="gXI-mA-LEp"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="Blw-nJ-KFN"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="KO3-w8-2Cg"/>
+                                                    <exclude reference="gXI-mA-LEp"/>
+                                                    <exclude reference="KbJ-ut-ynf"/>
+                                                    <exclude reference="8Yo-gh-nFz"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="Blw-nJ-KFN"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="KO3-w8-2Cg"/>
+                                                    <include reference="gXI-mA-LEp"/>
+                                                    <include reference="KbJ-ut-ynf"/>
+                                                    <include reference="8Yo-gh-nFz"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -440,7 +487,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Settings-icon" translatesAutoresizingMaskIntoConstraints="NO" id="syd-u4-pFq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SideMenu_aide" translatesAutoresizingMaskIntoConstraints="NO" id="syd-u4-pFq">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Gul-Ru-0Je"/>
@@ -914,7 +961,7 @@
                                                         <constraint firstAttribute="height" constant="33" id="AOL-OH-L16"/>
                                                         <constraint firstAttribute="width" constant="49" id="guj-dN-Qby"/>
                                                     </constraints>
-                                                    <state key="normal" image="5D628DB2-0971-4166-BAF6-5DA153E9F0CC">
+                                                    <state key="normal" image="CEEEA27F-D819-4C22-BDD2-46B30EE4D200">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <variation key="default">
@@ -2142,236 +2189,171 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BarCell" rowHeight="50" id="9a5-Tr-FMP" customClass="BarCell" customModule="Batling" customModuleProvider="target">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9a5-Tr-FMP" id="WoA-uM-GR0">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-90-cBq">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="52" id="7Wi-cc-VBf"/>
-                                                        <constraint firstAttribute="width" secondItem="tFY-90-cBq" secondAttribute="height" multiplier="50:13" id="ejk-vH-gdk"/>
-                                                        <constraint firstAttribute="height" constant="52" id="ujD-xM-gv6"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="rectangle desel">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="selected" image="Rectangle sel"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="7Wi-cc-VBf"/>
-                                                            <exclude reference="ejk-vH-gdk"/>
-                                                            <exclude reference="ujD-xM-gv6"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <mask key="constraints">
-                                                            <exclude reference="7Wi-cc-VBf"/>
-                                                            <include reference="ejk-vH-gdk"/>
-                                                            <include reference="ujD-xM-gv6"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="activityButtonPressed:" destination="Pix-nB-HpU" eventType="touchUpInside" id="mVM-Og-LXY"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="MON ACTIVITE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ae4-3U-Qsn">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="0e1-UP-GI1"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="0e1-UP-GI1"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="0.0" y="15" width="160" height="21"/>
-                                                        <mask key="constraints">
-                                                            <include reference="0e1-UP-GI1"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-PW-EnL">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="52" id="96H-Mk-bqq"/>
-                                                        <constraint firstAttribute="width" secondItem="jvP-PW-EnL" secondAttribute="height" multiplier="50:13" id="ANB-47-y5C"/>
-                                                        <constraint firstAttribute="height" constant="52" id="ixQ-Ir-hah"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="rectangle desel">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <state key="selected" image="Rectangle sel"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="96H-Mk-bqq"/>
-                                                            <exclude reference="ANB-47-y5C"/>
-                                                            <exclude reference="ixQ-Ir-hah"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <mask key="constraints">
-                                                            <exclude reference="96H-Mk-bqq"/>
-                                                            <include reference="ANB-47-y5C"/>
-                                                            <exclude reference="ixQ-Ir-hah"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <connections>
-                                                        <action selector="batsButtonPressed:" destination="Pix-nB-HpU" eventType="touchUpInside" id="5S8-uc-RkJ"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MES BATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pne-cF-uc5">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="XuX-Eo-tLF"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="XuX-Eo-tLF"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="160" y="15" width="160" height="21"/>
-                                                        <mask key="constraints">
-                                                            <include reference="XuX-Eo-tLF"/>
-                                                        </mask>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="jvP-PW-EnL" firstAttribute="top" secondItem="WoA-uM-GR0" secondAttribute="topMargin" constant="-10" id="0go-Aw-0YL"/>
-                                                <constraint firstItem="jvP-PW-EnL" firstAttribute="leading" secondItem="tFY-90-cBq" secondAttribute="trailing" id="3Fo-pO-jfG"/>
-                                                <constraint firstItem="Ae4-3U-Qsn" firstAttribute="top" secondItem="WoA-uM-GR0" secondAttribute="topMargin" constant="7" id="Ey0-eX-5CX"/>
-                                                <constraint firstItem="Ae4-3U-Qsn" firstAttribute="leading" secondItem="WoA-uM-GR0" secondAttribute="leadingMargin" constant="-8" id="FNh-LB-CM0"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="pne-cF-uc5" secondAttribute="bottom" constant="6" id="HVz-bo-YV8"/>
-                                                <constraint firstItem="pne-cF-uc5" firstAttribute="top" secondItem="WoA-uM-GR0" secondAttribute="topMargin" constant="7" id="J0k-AP-9VR"/>
-                                                <constraint firstItem="jvP-PW-EnL" firstAttribute="width" secondItem="tFY-90-cBq" secondAttribute="width" id="L7V-QP-VnF"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="jvP-PW-EnL" secondAttribute="trailing" constant="-8" id="LhK-u7-nkK"/>
-                                                <constraint firstItem="pne-cF-uc5" firstAttribute="leading" secondItem="Ae4-3U-Qsn" secondAttribute="trailing" id="QNv-Fu-i27"/>
-                                                <constraint firstItem="jvP-PW-EnL" firstAttribute="height" secondItem="tFY-90-cBq" secondAttribute="height" id="Qar-zh-TYQ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ae4-3U-Qsn" secondAttribute="bottom" constant="6" id="R9x-4D-1y1"/>
-                                                <constraint firstItem="tFY-90-cBq" firstAttribute="leading" secondItem="WoA-uM-GR0" secondAttribute="leadingMargin" constant="-8" id="U6u-qT-w7f"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pne-cF-uc5" secondAttribute="trailing" constant="-8" id="YPw-c6-mCW"/>
-                                                <constraint firstItem="Ae4-3U-Qsn" firstAttribute="width" secondItem="pne-cF-uc5" secondAttribute="width" id="b8H-kE-upy"/>
-                                                <constraint firstItem="jvP-PW-EnL" firstAttribute="top" secondItem="WoA-uM-GR0" secondAttribute="topMargin" constant="-8" id="hBZ-Nu-Pcs"/>
-                                                <constraint firstItem="tFY-90-cBq" firstAttribute="top" secondItem="WoA-uM-GR0" secondAttribute="topMargin" constant="-8" id="itn-WO-oBl"/>
-                                                <constraint firstItem="tFY-90-cBq" firstAttribute="top" secondItem="WoA-uM-GR0" secondAttribute="topMargin" constant="-10" id="qAu-hb-eHP"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="tFY-90-cBq"/>
-                                                    <exclude reference="Ae4-3U-Qsn"/>
-                                                    <exclude reference="jvP-PW-EnL"/>
-                                                    <exclude reference="pne-cF-uc5"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <exclude reference="Ey0-eX-5CX"/>
-                                                    <exclude reference="FNh-LB-CM0"/>
-                                                    <exclude reference="R9x-4D-1y1"/>
-                                                    <exclude reference="b8H-kE-upy"/>
-                                                    <exclude reference="HVz-bo-YV8"/>
-                                                    <exclude reference="J0k-AP-9VR"/>
-                                                    <exclude reference="QNv-Fu-i27"/>
-                                                    <exclude reference="YPw-c6-mCW"/>
-                                                    <exclude reference="0go-Aw-0YL"/>
-                                                    <exclude reference="3Fo-pO-jfG"/>
-                                                    <exclude reference="L7V-QP-VnF"/>
-                                                    <exclude reference="LhK-u7-nkK"/>
-                                                    <exclude reference="Qar-zh-TYQ"/>
-                                                    <exclude reference="hBZ-Nu-Pcs"/>
-                                                    <exclude reference="U6u-qT-w7f"/>
-                                                    <exclude reference="itn-WO-oBl"/>
-                                                    <exclude reference="qAu-hb-eHP"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="tFY-90-cBq"/>
-                                                    <include reference="Ae4-3U-Qsn"/>
-                                                    <include reference="jvP-PW-EnL"/>
-                                                    <include reference="pne-cF-uc5"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <include reference="Ey0-eX-5CX"/>
-                                                    <include reference="FNh-LB-CM0"/>
-                                                    <include reference="R9x-4D-1y1"/>
-                                                    <include reference="b8H-kE-upy"/>
-                                                    <include reference="HVz-bo-YV8"/>
-                                                    <include reference="J0k-AP-9VR"/>
-                                                    <include reference="QNv-Fu-i27"/>
-                                                    <include reference="YPw-c6-mCW"/>
-                                                    <include reference="0go-Aw-0YL"/>
-                                                    <include reference="3Fo-pO-jfG"/>
-                                                    <include reference="L7V-QP-VnF"/>
-                                                    <include reference="LhK-u7-nkK"/>
-                                                    <include reference="Qar-zh-TYQ"/>
-                                                    <exclude reference="hBZ-Nu-Pcs"/>
-                                                    <include reference="U6u-qT-w7f"/>
-                                                    <exclude reference="itn-WO-oBl"/>
-                                                    <include reference="qAu-hb-eHP"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="activityButton" destination="tFY-90-cBq" id="0MF-Lg-4Oo"/>
-                                            <outlet property="batsButton" destination="jvP-PW-EnL" id="N8A-Y7-lxh"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="75" id="ELc-KQ-tWP" userLabel="Profile Cell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="120" id="ELc-KQ-tWP" userLabel="Profile Cell" customClass="BarCell" customModule="Batling" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ELc-KQ-tWP" id="CmQ-Fd-5dg">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLK-En-lCg">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="52" id="76F-tJ-jZW"/>
+                                                        <constraint firstAttribute="width" secondItem="GLK-En-lCg" secondAttribute="height" multiplier="50:13" id="OVN-Tk-Rkm"/>
+                                                        <constraint firstAttribute="height" constant="52" id="Sn5-hN-3S7"/>
+                                                        <constraint firstAttribute="height" constant="52" id="krp-XS-a5u"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="rectangle desel">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="Rectangle sel"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="76F-tJ-jZW"/>
+                                                            <exclude reference="OVN-Tk-Rkm"/>
+                                                            <exclude reference="Sn5-hN-3S7"/>
+                                                            <exclude reference="krp-XS-a5u"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <exclude reference="76F-tJ-jZW"/>
+                                                            <exclude reference="OVN-Tk-Rkm"/>
+                                                            <exclude reference="Sn5-hN-3S7"/>
+                                                            <include reference="krp-XS-a5u"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="activityButtonPressed:" destination="Pix-nB-HpU" eventType="touchUpInside" id="qbU-d2-p3f"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yohboy – Batscore 2376" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0i-Or-wTU">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtj-e7-phP">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Rtj-e7-phP" secondAttribute="height" multiplier="50:13" id="3HO-iZ-XeH"/>
+                                                        <constraint firstAttribute="height" constant="52" id="7u9-1w-cGI"/>
+                                                        <constraint firstAttribute="width" secondItem="Rtj-e7-phP" secondAttribute="height" multiplier="50:13" id="OzN-kb-C6g"/>
+                                                        <constraint firstAttribute="height" constant="52" id="dDk-0t-7ie"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="rectangle desel">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" image="Rectangle sel"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="3HO-iZ-XeH"/>
+                                                            <exclude reference="7u9-1w-cGI"/>
+                                                            <exclude reference="OzN-kb-C6g"/>
+                                                            <exclude reference="dDk-0t-7ie"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <exclude reference="3HO-iZ-XeH"/>
+                                                            <exclude reference="7u9-1w-cGI"/>
+                                                            <exclude reference="OzN-kb-C6g"/>
+                                                            <include reference="dDk-0t-7ie"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="activityButtonPressed:" destination="Pix-nB-HpU" eventType="touchUpInside" id="pd1-vR-NTz"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.027450980390000001" green="0.054901960780000002" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="GLK-En-lCg" firstAttribute="height" secondItem="Rtj-e7-phP" secondAttribute="height" id="4ju-TE-2zi"/>
+                                                <constraint firstItem="Rtj-e7-phP" firstAttribute="width" secondItem="Rtj-e7-phP" secondAttribute="height" multiplier="50:13" id="4wo-Ds-H4U"/>
+                                                <constraint firstItem="GLK-En-lCg" firstAttribute="leading" secondItem="Rtj-e7-phP" secondAttribute="trailing" id="52x-mT-BsD"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="r0i-Or-wTU" secondAttribute="trailing" constant="30" id="CTz-wg-OOL"/>
+                                                <constraint firstItem="r0i-Or-wTU" firstAttribute="top" secondItem="CmQ-Fd-5dg" secondAttribute="topMargin" constant="21" id="FcB-lY-DBz"/>
+                                                <constraint firstItem="Rtj-e7-phP" firstAttribute="top" secondItem="r0i-Or-wTU" secondAttribute="bottom" constant="17" id="HrI-k5-Rpq"/>
+                                                <constraint firstItem="GLK-En-lCg" firstAttribute="width" secondItem="GLK-En-lCg" secondAttribute="height" multiplier="50:13" id="OBC-xx-BPd"/>
                                                 <constraint firstAttribute="centerX" secondItem="r0i-Or-wTU" secondAttribute="centerX" constant="-0.5" id="X9v-hy-p7e"/>
+                                                <constraint firstAttribute="centerX" secondItem="Rtj-e7-phP" secondAttribute="centerX" constant="100" id="YQI-0S-ZhV"/>
+                                                <constraint firstItem="GLK-En-lCg" firstAttribute="top" secondItem="r0i-Or-wTU" secondAttribute="bottom" constant="17" id="ae2-Gt-KNh"/>
                                                 <constraint firstItem="r0i-Or-wTU" firstAttribute="top" secondItem="CmQ-Fd-5dg" secondAttribute="topMargin" constant="18" id="cBZ-pY-HHP"/>
                                                 <constraint firstItem="r0i-Or-wTU" firstAttribute="leading" secondItem="CmQ-Fd-5dg" secondAttribute="leadingMargin" constant="31" id="cPS-G4-m0Z"/>
+                                                <constraint firstItem="GLK-En-lCg" firstAttribute="width" secondItem="GLK-En-lCg" secondAttribute="height" multiplier="50:13" id="fHd-oL-1lx"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="r0i-Or-wTU" secondAttribute="bottom" constant="19" id="gpB-aW-5FS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GLK-En-lCg" secondAttribute="trailing" constant="-8" id="hg5-hL-IJ8"/>
+                                                <constraint firstItem="Rtj-e7-phP" firstAttribute="top" secondItem="r0i-Or-wTU" secondAttribute="bottom" constant="17" id="jcE-ES-V3d"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Rtj-e7-phP" secondAttribute="bottom" constant="-8" id="tf8-40-zdo"/>
+                                                <constraint firstItem="GLK-En-lCg" firstAttribute="width" secondItem="Rtj-e7-phP" secondAttribute="width" id="uob-PJ-sxc"/>
+                                                <constraint firstItem="Rtj-e7-phP" firstAttribute="leading" secondItem="CmQ-Fd-5dg" secondAttribute="leadingMargin" constant="-8" id="x9n-We-rNm">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="-8"/>
+                                                </constraint>
+                                                <constraint firstAttribute="centerX" secondItem="GLK-En-lCg" secondAttribute="centerX" constant="-100" id="z5d-bL-DvF"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
+                                                    <exclude reference="GLK-En-lCg"/>
                                                     <exclude reference="r0i-Or-wTU"/>
+                                                    <exclude reference="Rtj-e7-phP"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="CTz-wg-OOL"/>
+                                                    <exclude reference="FcB-lY-DBz"/>
                                                     <exclude reference="X9v-hy-p7e"/>
                                                     <exclude reference="cBZ-pY-HHP"/>
                                                     <exclude reference="cPS-G4-m0Z"/>
                                                     <exclude reference="gpB-aW-5FS"/>
+                                                    <exclude reference="4wo-Ds-H4U"/>
+                                                    <exclude reference="HrI-k5-Rpq"/>
+                                                    <exclude reference="YQI-0S-ZhV"/>
+                                                    <exclude reference="jcE-ES-V3d"/>
+                                                    <exclude reference="tf8-40-zdo"/>
+                                                    <exclude reference="x9n-We-rNm"/>
+                                                    <exclude reference="4ju-TE-2zi"/>
+                                                    <exclude reference="52x-mT-BsD"/>
+                                                    <exclude reference="OBC-xx-BPd"/>
+                                                    <exclude reference="ae2-Gt-KNh"/>
+                                                    <exclude reference="fHd-oL-1lx"/>
+                                                    <exclude reference="hg5-hL-IJ8"/>
+                                                    <exclude reference="uob-PJ-sxc"/>
+                                                    <exclude reference="z5d-bL-DvF"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
+                                                    <include reference="GLK-En-lCg"/>
                                                     <include reference="r0i-Or-wTU"/>
+                                                    <include reference="Rtj-e7-phP"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="CTz-wg-OOL"/>
+                                                    <include reference="FcB-lY-DBz"/>
                                                     <include reference="X9v-hy-p7e"/>
-                                                    <include reference="cBZ-pY-HHP"/>
+                                                    <exclude reference="cBZ-pY-HHP"/>
                                                     <include reference="cPS-G4-m0Z"/>
-                                                    <include reference="gpB-aW-5FS"/>
+                                                    <exclude reference="gpB-aW-5FS"/>
+                                                    <exclude reference="4wo-Ds-H4U"/>
+                                                    <exclude reference="HrI-k5-Rpq"/>
+                                                    <exclude reference="YQI-0S-ZhV"/>
+                                                    <include reference="jcE-ES-V3d"/>
+                                                    <include reference="tf8-40-zdo"/>
+                                                    <include reference="x9n-We-rNm"/>
+                                                    <exclude reference="4ju-TE-2zi"/>
+                                                    <include reference="52x-mT-BsD"/>
+                                                    <exclude reference="OBC-xx-BPd"/>
+                                                    <include reference="ae2-Gt-KNh"/>
+                                                    <exclude reference="fHd-oL-1lx"/>
+                                                    <include reference="hg5-hL-IJ8"/>
+                                                    <include reference="uob-PJ-sxc"/>
+                                                    <exclude reference="z5d-bL-DvF"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="activityButton" destination="Rtj-e7-phP" id="i5p-kN-cUu"/>
+                                            <outlet property="batsButton" destination="GLK-En-lCg" id="aRW-O6-S0G"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellImage" rowHeight="555" id="fcX-pi-pUq" customClass="FeedImageCell" customModule="Batling" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2391,8 +2373,7 @@
                                                             <exclude reference="eks-y6-noD"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="24" y="27" width="126" height="101"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <exclude reference="eks-y6-noD"/>
                                                         </mask>
@@ -2413,8 +2394,7 @@
                                                             <exclude reference="ctd-Zd-vnX"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="229" y="31" width="83" height="17"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="2mI-qa-TSB"/>
                                                             <exclude reference="ctd-Zd-vnX"/>
@@ -2438,8 +2418,7 @@
                                                             <exclude reference="cqg-ad-5ej"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="193" y="27" width="28" height="110"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <exclude reference="FHO-Aa-Ndw"/>
                                                             <include reference="cqg-ad-5ej"/>
@@ -2456,8 +2435,7 @@
                                                             <exclude reference="Ch9-uK-Eob"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="0.0" y="148" width="320" height="320"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="Ch9-uK-Eob"/>
                                                         </mask>
@@ -2491,7 +2469,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="5Sw-UU-GK2"/>
                                                         <constraint firstAttribute="height" constant="30" id="vau-Fd-bID"/>
                                                     </constraints>
-                                                    <state key="normal" image="EEFBA0A9-07C4-4E8E-8788-99D173D3C8AF">
+                                                    <state key="normal" image="30AAAF01-C49F-44DF-AFD9-25BB27C11BA2">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <variation key="default">
@@ -2522,8 +2500,7 @@
                                                             <exclude reference="uud-c1-QxQ"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="263" y="483" width="49" height="33"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="Kg2-Gh-E1e"/>
                                                             <include reference="uud-c1-QxQ"/>
@@ -2561,7 +2538,7 @@
                                                         <constraint firstAttribute="height" constant="33" id="7AN-oi-Zc8"/>
                                                         <constraint firstAttribute="width" constant="49" id="MsO-wl-h8R"/>
                                                     </constraints>
-                                                    <state key="normal" image="E3F536FE-71CC-45A3-A737-480F84224C7D">
+                                                    <state key="normal" image="F74FA36B-3E4B-4DBB-A95B-89ADA8FCD92E">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <variation key="default">
@@ -2570,8 +2547,7 @@
                                                             <exclude reference="MsO-wl-h8R"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="213" y="483" width="49" height="33"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="7AN-oi-Zc8"/>
                                                             <include reference="MsO-wl-h8R"/>
@@ -2743,8 +2719,7 @@
                                                             <exclude reference="8dp-Il-6Cn"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="24" y="27" width="126" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="8dp-Il-6Cn"/>
                                                         </mask>
@@ -2765,8 +2740,7 @@
                                                             <exclude reference="x3u-Fq-OPX"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="229" y="31" width="83" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="rsa-5h-GpL"/>
                                                             <include reference="x3u-Fq-OPX"/>
@@ -2790,8 +2764,7 @@
                                                             <exclude reference="Gfg-q0-nvG"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="193" y="27" width="28" height="30"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="9r1-yZ-ba6"/>
                                                             <include reference="Gfg-q0-nvG"/>
@@ -2857,8 +2830,7 @@
                                                             <exclude reference="PH1-cg-jBM"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="259" y="118" width="49" height="33"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="P2a-ix-QIO"/>
                                                             <include reference="PH1-cg-jBM"/>
@@ -2896,7 +2868,7 @@
                                                         <constraint firstAttribute="width" constant="49" id="GhU-g8-lJ9"/>
                                                         <constraint firstAttribute="height" constant="33" id="Nmz-tk-oew"/>
                                                     </constraints>
-                                                    <state key="normal" image="4B6FEC15-7E99-495D-A72A-089CBC28AF7D">
+                                                    <state key="normal" image="720A1992-40DF-42FB-B9F0-BBE88560DB65">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <variation key="default">
@@ -2905,8 +2877,7 @@
                                                             <exclude reference="Nmz-tk-oew"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="209" y="118" width="49" height="33"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="GhU-g8-lJ9"/>
                                                             <include reference="Nmz-tk-oew"/>
@@ -2918,9 +2889,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="24" y="81" width="276" height="21"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -3709,9 +3677,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYN-xS-rhb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="117" width="400" height="634"/>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -3896,51 +3861,6 @@
             </objects>
             <point key="canvasLocation" x="3370.5" y="1107.75"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="O3s-eh-zyt">
-            <objects>
-                <tableViewController id="8GP-SJ-hVE" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9CI-Do-z3S">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NYS-Pg-tKP">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NYS-Pg-tKP" id="fkg-pH-qoo">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8GP-SJ-hVE" id="uxG-FT-T9C"/>
-                            <outlet property="delegate" destination="8GP-SJ-hVE" id="eif-dd-3GG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="Jqk-Go-RxT"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xsp-qV-tO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4906.5" y="1878.75"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="iFl-Iw-yj3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fHi-sM-Ckf" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yj8-IB-Q7O">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8GP-SJ-hVE" kind="relationship" relationship="rootViewController" id="bw8-Fb-yoa"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k3K-24-70G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3991.5" y="1878.75"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="N7b-xM-tZC">
             <objects>
@@ -4097,6 +4017,30 @@
                                                         <segue destination="ddM-UO-KlE" kind="presentation" id="y7M-d8-pHn"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5k-1u-SAx">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="204" id="5P6-Gq-RIa"/>
+                                                        <constraint firstAttribute="height" constant="30" id="a49-B0-3ox"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                    <state key="normal" title="J'ai oublié mon mot de passe">
+                                                        <color key="titleColor" red="0.27450980390000002" green="0.87843137250000003" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="5P6-Gq-RIa"/>
+                                                            <exclude reference="a49-B0-3ox"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="5P6-Gq-RIa"/>
+                                                            <include reference="a49-B0-3ox"/>
+                                                        </mask>
+                                                    </variation>
+                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ag9-7q-EQl">
                                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                     <constraints>
@@ -4121,19 +4065,30 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="a5k-1u-SAx" firstAttribute="top" secondItem="QJI-dl-KD1" secondAttribute="topMargin" id="0Ih-Lk-Sr5"/>
+                                                <constraint firstItem="a5k-1u-SAx" firstAttribute="top" secondItem="QJI-dl-KD1" secondAttribute="topMargin" constant="11" id="5tb-EK-zS9"/>
+                                                <constraint firstItem="Ag9-7q-EQl" firstAttribute="top" secondItem="23I-Y8-UKv" secondAttribute="bottom" constant="22" id="JJY-2N-vKj"/>
                                                 <constraint firstItem="Ag9-7q-EQl" firstAttribute="top" secondItem="23I-Y8-UKv" secondAttribute="bottom" constant="35" id="Ows-ds-nc6"/>
                                                 <constraint firstItem="23I-Y8-UKv" firstAttribute="top" secondItem="QJI-dl-KD1" secondAttribute="topMargin" constant="38" id="Trz-Ek-Hgw"/>
+                                                <constraint firstAttribute="centerX" secondItem="a5k-1u-SAx" secondAttribute="centerX" id="d7d-iA-JWB"/>
+                                                <constraint firstItem="23I-Y8-UKv" firstAttribute="top" secondItem="QJI-dl-KD1" secondAttribute="topMargin" constant="60" id="fnV-QX-SWk"/>
                                                 <constraint firstAttribute="centerX" secondItem="Ag9-7q-EQl" secondAttribute="centerX" id="gZC-Vw-u7o"/>
                                                 <constraint firstAttribute="centerX" secondItem="23I-Y8-UKv" secondAttribute="centerX" id="mQ1-Dy-o1F"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="23I-Y8-UKv"/>
+                                                    <exclude reference="a5k-1u-SAx"/>
                                                     <exclude reference="Ag9-7q-EQl"/>
                                                 </mask>
                                                 <mask key="constraints">
+                                                    <exclude reference="0Ih-Lk-Sr5"/>
+                                                    <exclude reference="5tb-EK-zS9"/>
+                                                    <exclude reference="d7d-iA-JWB"/>
                                                     <exclude reference="Trz-Ek-Hgw"/>
+                                                    <exclude reference="fnV-QX-SWk"/>
                                                     <exclude reference="mQ1-Dy-o1F"/>
+                                                    <exclude reference="JJY-2N-vKj"/>
                                                     <exclude reference="Ows-ds-nc6"/>
                                                     <exclude reference="gZC-Vw-u7o"/>
                                                 </mask>
@@ -4141,12 +4096,18 @@
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="23I-Y8-UKv"/>
+                                                    <include reference="a5k-1u-SAx"/>
                                                     <include reference="Ag9-7q-EQl"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="Trz-Ek-Hgw"/>
+                                                    <exclude reference="0Ih-Lk-Sr5"/>
+                                                    <include reference="5tb-EK-zS9"/>
+                                                    <include reference="d7d-iA-JWB"/>
+                                                    <exclude reference="Trz-Ek-Hgw"/>
+                                                    <include reference="fnV-QX-SWk"/>
                                                     <include reference="mQ1-Dy-o1F"/>
-                                                    <include reference="Ows-ds-nc6"/>
+                                                    <include reference="JJY-2N-vKj"/>
+                                                    <exclude reference="Ows-ds-nc6"/>
                                                     <include reference="gZC-Vw-u7o"/>
                                                 </mask>
                                             </variation>
@@ -4733,307 +4694,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="4B6FEC15-7E99-495D-A72A-089CBC28AF7D" width="27" height="27">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
-GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
-c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MjcsIDI3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
-HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERPSTU0AKgAAC2wAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhQCBAhUAwcN
-jgQJELkECxPMAwsU1gQLE8wECRC5AwcNjgIECFQAAAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQIdAwcNjwMMFN0DCxTOAggOngEFCWwCBAdTAAQF
-RQIEB1MBBQlsAggOnwMLFM0DDBTdAwcNjwEBAh0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAADCFwFDBTeAgkQtAADBkQAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAkAAwZEAgkQswUMFd4CBAhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwYK
-eQUMFecABAhZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAEB1gFDBbnAwYMewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBQlnBQwV5AECBDMAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgQyBQwV
-5AEFCmkAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAiYDCxblAAMHTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGTAULFeYAAQMnAAAA
-AAAAAAAAAAAAAAAAAAMHDIwECRGyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQJELIDBwyNAAAAAAAAAAAAAAAAAAAB
-CwUKFNcCAwdOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDB00FCxTXAAAACwAAAAAAAAAAAQIDKgUMFNwAAQMfAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAx8FDBTcAQIDKgAAAAAAAAAAAQIEMwULFNcAAQIaAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAABAhoFCxTXAQIEMwAAAAAAAAAAAAEDJAMMFN4BAQIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAyMDDBTeAAED
-JAAAAAAAAAAAAAAABQMLEtECBAhaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIECF8DCxPOAAAABgAAAAAAAAAAAAAA
-AAMGC4AEChHAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwQKEsUDBgp4AAAAAAAAAAAAAAAAAAAAAAABAhgFDBTeAQYK
-bwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAQUKbQULFNoAAQIXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwZMBQ0X8AIECFcAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAdXBQwW
-7AADBkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQIVgUMFuYDBgt9AAAAAwAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgMHDIIFDBXqAgQHVQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBj4FDBTgAAABDwAAAAAAAAADAAAABAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAABAABAh0BBQptAwsTzQUKEsYAAwU5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAx8EChK/AAAACQAAAAACBAldBAsTywIIDqADBw2JAwYMfAMHDIsCCA6gBAoS
-xQMMFeAEChG8AgQIWwAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAIFCWYDBw2YAAAAAAAAAQwCChHAAwcMkAEGDIkCCA+mBAkQrAQIDqABBw2LAgQIXgEBAygAAAABAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQQKEsMABAhZAgQH
-UQQKEb4DBw2PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIWgULFM8CCA+wAwgOkwADBkwAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgEAAAMAAAABABsAAAEBAAMAAAABABsAAAECAAMA
-AAAEAAAMGgEDAAMAAAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMA
-AAABAAQAAAEWAAMAAAABABsAAAEXAAQAAAABAAALZAEcAAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMA
-AAAEAAAMIodzAAcAAAeoAAAMKgAAAAAACAAIAAgACAABAAEAAQABAAAHqGFwcGwCIAAAbW50clJHQiBY
-WVogB9kAAgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1h
-cHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgA
-AABvZHNjbQAAAXgAAAVsY3BydAAABuQAAAA4d3RwdAAABxwAAAAUclhZWgAABzAAAAAUZ1hZWgAAB0QA
-AAAUYlhZWgAAB1gAAAAUclRSQwAAB2wAAAAOY2hhZAAAB3wAAAAsYlRSQwAAB2wAAAAOZ1RSQwAAB2wA
-AAAOZGVzYwAAAAAAAAAUR2VuZXJpYyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFBy
-b2ZpbGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMA
-AAAAAAAAHgAAAAxza1NLAAAAKAAAAXhockhSAAAAKAAAAaBjYUVTAAAAJAAAAchwdEJSAAAAJgAAAex1
-a1VBAAAAKgAAAhJmckZVAAAAKAAAAjx6aFRXAAAAFgAAAmRpdElUAAAAKAAAAnpuYk5PAAAAJgAAAqJr
-b0tSAAAAFgAAAshjc0NaAAAAIgAAAt5oZUlMAAAAHgAAAwBkZURFAAAALAAAAx5odUhVAAAAKAAAA0pz
-dlNFAAAAJgAAAqJ6aENOAAAAFgAAA3JqYUpQAAAAGgAAA4hyb1JPAAAAJAAAA6JlbEdSAAAAIgAAA8Zw
-dFBPAAAAJgAAA+hubE5MAAAAKAAABA5lc0VTAAAAJgAAA+h0aFRIAAAAJAAABDZ0clRSAAAAIgAABFpm
-aUZJAAAAKAAABHxwbFBMAAAALAAABKRydVJVAAAAIgAABNBhckVHAAAAJgAABPJlblVTAAAAJgAABRhk
-YURLAAAALgAABT4AVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUA
-cgBpAQ0AawBpACAAUgBHAEIAIABwAHIAbwBmAGkAbABQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A
-6AByAGkAYwBQAGUAcgBmAGkAbAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0E
-OAQ5ACAEPwRABD4ERAQwBDkEOwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUA
-IABSAFYAQpAadSgAIABSAEcAQgAggnJfaWPPj/AAUAByAG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4A
-ZQByAGkAYwBvAEcAZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGzHfLwYACAAUgBHAEIA
-INUEuFzTDMd8AE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIA
-RwBCACAF2wXcBdwF2QBBAGwAbABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsAMEA
-bAB0AGEAbADhAG4AbwBzACAAUgBHAEIAIABwAHIAbwBmAGkAbGZukBoAIABSAEcAQgAgY8+P8GWHTvZO
-AIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkA
-YwOTA7UDvQO5A7oDzAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcA
-ZQBuAOkAcgBpAGMAbwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMO
-RA4fDiUOTAAgAFIARwBCACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkA
-bABpAFkAbABlAGkAbgBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBVAG4AaQB3AGUAcgBzAGEA
-bABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBCBB4EMQRJBDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcA
-QgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZEBjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcA
-QgAgAFAAcgBvAGYAaQBsAGUARwBlAG4AZQByAGUAbAAgAFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwA
-cwBldGV4dAAAAABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBY
-WVogAAAAAAAA81IAAQAAAAEWz1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRY
-WVogAAAAAAAAKBoAABWfAAC4NmN1cnYAAAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IA
-AP2R///7ov///aMAAAPcAADAbNIlJicoWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdl
-UmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09iamVjdNIlJi0uV05TQXJyYXmi
-LSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQ
-A4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tleWVkQXJjaGl2ZXLRQEFUcm9v
-dIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCpAKsArQCyALUA
-twC5ALsAvQDCANkA2wDdFLMUuBTDFMwU3xTjFPYVARUKFQ8VFxUaFR8VLhUyFTkVQRVOFVMVVRVXFVwV
-ZBVnFWwVdBV3FYkVjBWRAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAFZM
-</mutableData>
-        </image>
-        <image name="5D628DB2-0971-4166-BAF6-5DA153E9F0CC" width="27" height="27">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
-GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
-c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MjcsIDI3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
-HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERPSTU0AKgAAC2wAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhQCBAhUAwcN
-jgQJELkECxPMAwsU1gQLE8wECRC5AwcNjgIECFQAAAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQIdAwcNjwMMFN0DCxTOAggOngEFCWwCBAdTAAQF
-RQIEB1MBBQlsAggOnwMLFM0DDBTdAwcNjwEBAh0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAADCFwFDBTeAgkQtAADBkQAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAkAAwZEAgkQswUMFd4CBAhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwYK
-eQUMFecABAhZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAEB1gFDBbnAwYMewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBQlnBQwV5AECBDMAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgQyBQwV
-5AEFCmkAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAiYDCxblAAMHTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGTAULFeYAAQMnAAAA
-AAAAAAAAAAAAAAAAAAMHDIwECRGyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQJELIDBwyNAAAAAAAAAAAAAAAAAAAB
-CwUKFNcCAwdOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDB00FCxTXAAAACwAAAAAAAAAAAQIDKgUMFNwAAQMfAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAx8FDBTcAQIDKgAAAAAAAAAAAQIEMwULFNcAAQIaAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAABAhoFCxTXAQIEMwAAAAAAAAAAAAEDJAMMFN4BAQIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAyMDDBTeAAED
-JAAAAAAAAAAAAAAABQMLEtECBAhaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIECF8DCxPOAAAABgAAAAAAAAAAAAAA
-AAMGC4AEChHAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwQKEsUDBgp4AAAAAAAAAAAAAAAAAAAAAAABAhgFDBTeAQYK
-bwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAQUKbQULFNoAAQIXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwZMBQ0X8AIECFcAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAdXBQwW
-7AADBkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQIVgUMFuYDBgt9AAAAAwAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgMHDIIFDBXqAgQHVQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBj4FDBTgAAABDwAAAAAAAAADAAAABAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAABAABAh0BBQptAwsTzQUKEsYAAwU5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAx8EChK/AAAACQAAAAACBAldBAsTywIIDqADBw2JAwYMfAMHDIsCCA6gBAoS
-xQMMFeAEChG8AgQIWwAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAIFCWYDBw2YAAAAAAAAAQwCChHAAwcMkAEGDIkCCA+mBAkQrAQIDqABBw2LAgQIXgEBAygAAAABAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQQKEsMABAhZAgQH
-UQQKEb4DBw2PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIWgULFM8CCA+wAwgOkwADBkwAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgEAAAMAAAABABsAAAEBAAMAAAABABsAAAECAAMA
-AAAEAAAMGgEDAAMAAAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMA
-AAABAAQAAAEWAAMAAAABABsAAAEXAAQAAAABAAALZAEcAAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMA
-AAAEAAAMIodzAAcAAAeoAAAMKgAAAAAACAAIAAgACAABAAEAAQABAAAHqGFwcGwCIAAAbW50clJHQiBY
-WVogB9kAAgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1h
-cHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgA
-AABvZHNjbQAAAXgAAAVsY3BydAAABuQAAAA4d3RwdAAABxwAAAAUclhZWgAABzAAAAAUZ1hZWgAAB0QA
-AAAUYlhZWgAAB1gAAAAUclRSQwAAB2wAAAAOY2hhZAAAB3wAAAAsYlRSQwAAB2wAAAAOZ1RSQwAAB2wA
-AAAOZGVzYwAAAAAAAAAUR2VuZXJpYyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFBy
-b2ZpbGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMA
-AAAAAAAAHgAAAAxza1NLAAAAKAAAAXhockhSAAAAKAAAAaBjYUVTAAAAJAAAAchwdEJSAAAAJgAAAex1
-a1VBAAAAKgAAAhJmckZVAAAAKAAAAjx6aFRXAAAAFgAAAmRpdElUAAAAKAAAAnpuYk5PAAAAJgAAAqJr
-b0tSAAAAFgAAAshjc0NaAAAAIgAAAt5oZUlMAAAAHgAAAwBkZURFAAAALAAAAx5odUhVAAAAKAAAA0pz
-dlNFAAAAJgAAAqJ6aENOAAAAFgAAA3JqYUpQAAAAGgAAA4hyb1JPAAAAJAAAA6JlbEdSAAAAIgAAA8Zw
-dFBPAAAAJgAAA+hubE5MAAAAKAAABA5lc0VTAAAAJgAAA+h0aFRIAAAAJAAABDZ0clRSAAAAIgAABFpm
-aUZJAAAAKAAABHxwbFBMAAAALAAABKRydVJVAAAAIgAABNBhckVHAAAAJgAABPJlblVTAAAAJgAABRhk
-YURLAAAALgAABT4AVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUA
-cgBpAQ0AawBpACAAUgBHAEIAIABwAHIAbwBmAGkAbABQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A
-6AByAGkAYwBQAGUAcgBmAGkAbAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0E
-OAQ5ACAEPwRABD4ERAQwBDkEOwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUA
-IABSAFYAQpAadSgAIABSAEcAQgAggnJfaWPPj/AAUAByAG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4A
-ZQByAGkAYwBvAEcAZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGzHfLwYACAAUgBHAEIA
-INUEuFzTDMd8AE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIA
-RwBCACAF2wXcBdwF2QBBAGwAbABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsAMEA
-bAB0AGEAbADhAG4AbwBzACAAUgBHAEIAIABwAHIAbwBmAGkAbGZukBoAIABSAEcAQgAgY8+P8GWHTvZO
-AIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkA
-YwOTA7UDvQO5A7oDzAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcA
-ZQBuAOkAcgBpAGMAbwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMO
-RA4fDiUOTAAgAFIARwBCACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkA
-bABpAFkAbABlAGkAbgBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBVAG4AaQB3AGUAcgBzAGEA
-bABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBCBB4EMQRJBDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcA
-QgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZEBjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcA
-QgAgAFAAcgBvAGYAaQBsAGUARwBlAG4AZQByAGUAbAAgAFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwA
-cwBldGV4dAAAAABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBY
-WVogAAAAAAAA81IAAQAAAAEWz1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRY
-WVogAAAAAAAAKBoAABWfAAC4NmN1cnYAAAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IA
-AP2R///7ov///aMAAAPcAADAbNIlJicoWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdl
-UmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09iamVjdNIlJi0uV05TQXJyYXmi
-LSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQ
-A4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tleWVkQXJjaGl2ZXLRQEFUcm9v
-dIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCpAKsArQCyALUA
-twC5ALsAvQDCANkA2wDdFLMUuBTDFMwU3xTjFPYVARUKFQ8VFxUaFR8VLhUyFTkVQRVOFVMVVRVXFVwV
-ZBVnFWwVdBV3FYkVjBWRAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAFZM
-</mutableData>
-        </image>
-        <image name="Bat icon" width="709" height="296"/>
-        <image name="Connexion home" width="448" height="156"/>
-        <image name="Contact us" width="74" height="58"/>
-        <image name="E3F536FE-71CC-45A3-A737-480F84224C7D" width="27" height="27">
-            <mutableData key="keyedArchiveRepresentation">
-YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
-GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
-c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MjcsIDI3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
-HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERPSTU0AKgAAC2wAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhQCBAhUAwcN
-jgQJELkECxPMAwsU1gQLE8wECRC5AwcNjgIECFQAAAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQIdAwcNjwMMFN0DCxTOAggOngEFCWwCBAdTAAQF
-RQIEB1MBBQlsAggOnwMLFM0DDBTdAwcNjwEBAh0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAADCFwFDBTeAgkQtAADBkQAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAkAAwZEAgkQswUMFd4CBAhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwYK
-eQUMFecABAhZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAEB1gFDBbnAwYMewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBQlnBQwV5AECBDMAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgQyBQwV
-5AEFCmkAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAiYDCxblAAMHTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGTAULFeYAAQMnAAAA
-AAAAAAAAAAAAAAAAAAMHDIwECRGyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQJELIDBwyNAAAAAAAAAAAAAAAAAAAB
-CwUKFNcCAwdOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDB00FCxTXAAAACwAAAAAAAAAAAQIDKgUMFNwAAQMfAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAx8FDBTcAQIDKgAAAAAAAAAAAQIEMwULFNcAAQIaAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAABAhoFCxTXAQIEMwAAAAAAAAAAAAEDJAMMFN4BAQIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAyMDDBTeAAED
-JAAAAAAAAAAAAAAABQMLEtECBAhaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIECF8DCxPOAAAABgAAAAAAAAAAAAAA
-AAMGC4AEChHAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwQKEsUDBgp4AAAAAAAAAAAAAAAAAAAAAAABAhgFDBTeAQYK
-bwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAQUKbQULFNoAAQIXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwZMBQ0X8AIECFcAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAdXBQwW
-7AADBkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQIVgUMFuYDBgt9AAAAAwAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgMHDIIFDBXqAgQHVQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBj4FDBTgAAABDwAAAAAAAAADAAAABAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAABAABAh0BBQptAwsTzQUKEsYAAwU5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAx8EChK/AAAACQAAAAACBAldBAsTywIIDqADBw2JAwYMfAMHDIsCCA6gBAoS
-xQMMFeAEChG8AgQIWwAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAIFCWYDBw2YAAAAAAAAAQwCChHAAwcMkAEGDIkCCA+mBAkQrAQIDqABBw2LAgQIXgEBAygAAAABAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQQKEsMABAhZAgQH
-UQQKEb4DBw2PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIWgULFM8CCA+wAwgOkwADBkwAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgEAAAMAAAABABsAAAEBAAMAAAABABsAAAECAAMA
-AAAEAAAMGgEDAAMAAAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMA
-AAABAAQAAAEWAAMAAAABABsAAAEXAAQAAAABAAALZAEcAAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMA
-AAAEAAAMIodzAAcAAAeoAAAMKgAAAAAACAAIAAgACAABAAEAAQABAAAHqGFwcGwCIAAAbW50clJHQiBY
-WVogB9kAAgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1h
-cHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgA
-AABvZHNjbQAAAXgAAAVsY3BydAAABuQAAAA4d3RwdAAABxwAAAAUclhZWgAABzAAAAAUZ1hZWgAAB0QA
-AAAUYlhZWgAAB1gAAAAUclRSQwAAB2wAAAAOY2hhZAAAB3wAAAAsYlRSQwAAB2wAAAAOZ1RSQwAAB2wA
-AAAOZGVzYwAAAAAAAAAUR2VuZXJpYyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFBy
-b2ZpbGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMA
-AAAAAAAAHgAAAAxza1NLAAAAKAAAAXhockhSAAAAKAAAAaBjYUVTAAAAJAAAAchwdEJSAAAAJgAAAex1
-a1VBAAAAKgAAAhJmckZVAAAAKAAAAjx6aFRXAAAAFgAAAmRpdElUAAAAKAAAAnpuYk5PAAAAJgAAAqJr
-b0tSAAAAFgAAAshjc0NaAAAAIgAAAt5oZUlMAAAAHgAAAwBkZURFAAAALAAAAx5odUhVAAAAKAAAA0pz
-dlNFAAAAJgAAAqJ6aENOAAAAFgAAA3JqYUpQAAAAGgAAA4hyb1JPAAAAJAAAA6JlbEdSAAAAIgAAA8Zw
-dFBPAAAAJgAAA+hubE5MAAAAKAAABA5lc0VTAAAAJgAAA+h0aFRIAAAAJAAABDZ0clRSAAAAIgAABFpm
-aUZJAAAAKAAABHxwbFBMAAAALAAABKRydVJVAAAAIgAABNBhckVHAAAAJgAABPJlblVTAAAAJgAABRhk
-YURLAAAALgAABT4AVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUA
-cgBpAQ0AawBpACAAUgBHAEIAIABwAHIAbwBmAGkAbABQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A
-6AByAGkAYwBQAGUAcgBmAGkAbAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0E
-OAQ5ACAEPwRABD4ERAQwBDkEOwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUA
-IABSAFYAQpAadSgAIABSAEcAQgAggnJfaWPPj/AAUAByAG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4A
-ZQByAGkAYwBvAEcAZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGzHfLwYACAAUgBHAEIA
-INUEuFzTDMd8AE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIA
-RwBCACAF2wXcBdwF2QBBAGwAbABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsAMEA
-bAB0AGEAbADhAG4AbwBzACAAUgBHAEIAIABwAHIAbwBmAGkAbGZukBoAIABSAEcAQgAgY8+P8GWHTvZO
-AIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkA
-YwOTA7UDvQO5A7oDzAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcA
-ZQBuAOkAcgBpAGMAbwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMO
-RA4fDiUOTAAgAFIARwBCACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkA
-bABpAFkAbABlAGkAbgBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBVAG4AaQB3AGUAcgBzAGEA
-bABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBCBB4EMQRJBDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcA
-QgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZEBjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcA
-QgAgAFAAcgBvAGYAaQBsAGUARwBlAG4AZQByAGUAbAAgAFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwA
-cwBldGV4dAAAAABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBY
-WVogAAAAAAAA81IAAQAAAAEWz1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRY
-WVogAAAAAAAAKBoAABWfAAC4NmN1cnYAAAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IA
-AP2R///7ov///aMAAAPcAADAbNIlJicoWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdl
-UmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09iamVjdNIlJi0uV05TQXJyYXmi
-LSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQ
-A4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tleWVkQXJjaGl2ZXLRQEFUcm9v
-dIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCpAKsArQCyALUA
-twC5ALsAvQDCANkA2wDdFLMUuBTDFMwU3xTjFPYVARUKFQ8VFxUaFR8VLhUyFTkVQRVOFVMVVRVXFVwV
-ZBVnFWwVdBV3FYkVjBWRAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAFZM
-</mutableData>
-        </image>
-        <image name="EEFBA0A9-07C4-4E8E-8788-99D173D3C8AF" width="49" height="33">
+        <image name="30AAAF01-C49F-44DF-AFD9-25BB27C11BA2" width="49" height="33">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -5191,7 +4852,307 @@ pwCpAKsArQCyALUAtwC5ALsAvQDCANkA2wDdIpMimCKjIqwivyLDItYi4SLqIu8i9yL6Iv8jDiMSIxkj
 ISMuIzMjNSM3IzwjRCNHI0wjVCNXI2kjbCNxAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAI3M
 </mutableData>
         </image>
+        <image name="720A1992-40DF-42FB-B9F0-BBE88560DB65" width="27" height="27">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MjcsIDI3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERPSTU0AKgAAC2wAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhQCBAhUAwcN
+jgQJELkECxPMAwsU1gQLE8wECRC5AwcNjgIECFQAAAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQIdAwcNjwMMFN0DCxTOAggOngEFCWwCBAdTAAQF
+RQIEB1MBBQlsAggOnwMLFM0DDBTdAwcNjwEBAh0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAADCFwFDBTeAgkQtAADBkQAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAkAAwZEAgkQswUMFd4CBAhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwYK
+eQUMFecABAhZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAEB1gFDBbnAwYMewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBQlnBQwV5AECBDMAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgQyBQwV
+5AEFCmkAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAiYDCxblAAMHTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGTAULFeYAAQMnAAAA
+AAAAAAAAAAAAAAAAAAMHDIwECRGyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQJELIDBwyNAAAAAAAAAAAAAAAAAAAB
+CwUKFNcCAwdOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDB00FCxTXAAAACwAAAAAAAAAAAQIDKgUMFNwAAQMfAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAABAx8FDBTcAQIDKgAAAAAAAAAAAQIEMwULFNcAAQIaAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAABAhoFCxTXAQIEMwAAAAAAAAAAAAEDJAMMFN4BAQIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAyMDDBTeAAED
+JAAAAAAAAAAAAAAABQMLEtECBAhaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIECF8DCxPOAAAABgAAAAAAAAAAAAAA
+AAMGC4AEChHAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwQKEsUDBgp4AAAAAAAAAAAAAAAAAAAAAAABAhgFDBTeAQYK
+bwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAQUKbQULFNoAAQIXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwZMBQ0X8AIECFcAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAdXBQwW
+7AADBkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQIVgUMFuYDBgt9AAAAAwAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgMHDIIFDBXqAgQHVQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBj4FDBTgAAABDwAAAAAAAAADAAAABAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAABAABAh0BBQptAwsTzQUKEsYAAwU5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAABAx8EChK/AAAACQAAAAACBAldBAsTywIIDqADBw2JAwYMfAMHDIsCCA6gBAoS
+xQMMFeAEChG8AgQIWwAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAIFCWYDBw2YAAAAAAAAAQwCChHAAwcMkAEGDIkCCA+mBAkQrAQIDqABBw2LAgQIXgEBAygAAAABAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQQKEsMABAhZAgQH
+UQQKEb4DBw2PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIWgULFM8CCA+wAwgOkwADBkwAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgEAAAMAAAABABsAAAEBAAMAAAABABsAAAECAAMA
+AAAEAAAMGgEDAAMAAAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMA
+AAABAAQAAAEWAAMAAAABABsAAAEXAAQAAAABAAALZAEcAAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMA
+AAAEAAAMIodzAAcAAAeoAAAMKgAAAAAACAAIAAgACAABAAEAAQABAAAHqGFwcGwCIAAAbW50clJHQiBY
+WVogB9kAAgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1h
+cHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgA
+AABvZHNjbQAAAXgAAAVsY3BydAAABuQAAAA4d3RwdAAABxwAAAAUclhZWgAABzAAAAAUZ1hZWgAAB0QA
+AAAUYlhZWgAAB1gAAAAUclRSQwAAB2wAAAAOY2hhZAAAB3wAAAAsYlRSQwAAB2wAAAAOZ1RSQwAAB2wA
+AAAOZGVzYwAAAAAAAAAUR2VuZXJpYyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFBy
+b2ZpbGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMA
+AAAAAAAAHgAAAAxza1NLAAAAKAAAAXhockhSAAAAKAAAAaBjYUVTAAAAJAAAAchwdEJSAAAAJgAAAex1
+a1VBAAAAKgAAAhJmckZVAAAAKAAAAjx6aFRXAAAAFgAAAmRpdElUAAAAKAAAAnpuYk5PAAAAJgAAAqJr
+b0tSAAAAFgAAAshjc0NaAAAAIgAAAt5oZUlMAAAAHgAAAwBkZURFAAAALAAAAx5odUhVAAAAKAAAA0pz
+dlNFAAAAJgAAAqJ6aENOAAAAFgAAA3JqYUpQAAAAGgAAA4hyb1JPAAAAJAAAA6JlbEdSAAAAIgAAA8Zw
+dFBPAAAAJgAAA+hubE5MAAAAKAAABA5lc0VTAAAAJgAAA+h0aFRIAAAAJAAABDZ0clRSAAAAIgAABFpm
+aUZJAAAAKAAABHxwbFBMAAAALAAABKRydVJVAAAAIgAABNBhckVHAAAAJgAABPJlblVTAAAAJgAABRhk
+YURLAAAALgAABT4AVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUA
+cgBpAQ0AawBpACAAUgBHAEIAIABwAHIAbwBmAGkAbABQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A
+6AByAGkAYwBQAGUAcgBmAGkAbAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0E
+OAQ5ACAEPwRABD4ERAQwBDkEOwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUA
+IABSAFYAQpAadSgAIABSAEcAQgAggnJfaWPPj/AAUAByAG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4A
+ZQByAGkAYwBvAEcAZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGzHfLwYACAAUgBHAEIA
+INUEuFzTDMd8AE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIA
+RwBCACAF2wXcBdwF2QBBAGwAbABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsAMEA
+bAB0AGEAbADhAG4AbwBzACAAUgBHAEIAIABwAHIAbwBmAGkAbGZukBoAIABSAEcAQgAgY8+P8GWHTvZO
+AIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkA
+YwOTA7UDvQO5A7oDzAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcA
+ZQBuAOkAcgBpAGMAbwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMO
+RA4fDiUOTAAgAFIARwBCACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkA
+bABpAFkAbABlAGkAbgBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBVAG4AaQB3AGUAcgBzAGEA
+bABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBCBB4EMQRJBDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcA
+QgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZEBjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcA
+QgAgAFAAcgBvAGYAaQBsAGUARwBlAG4AZQByAGUAbAAgAFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwA
+cwBldGV4dAAAAABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBY
+WVogAAAAAAAA81IAAQAAAAEWz1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRY
+WVogAAAAAAAAKBoAABWfAAC4NmN1cnYAAAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IA
+AP2R///7ov///aMAAAPcAADAbNIlJicoWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdl
+UmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09iamVjdNIlJi0uV05TQXJyYXmi
+LSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQ
+A4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tleWVkQXJjaGl2ZXLRQEFUcm9v
+dIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCpAKsArQCyALUA
+twC5ALsAvQDCANkA2wDdFLMUuBTDFMwU3xTjFPYVARUKFQ8VFxUaFR8VLhUyFTkVQRVOFVMVVRVXFVwV
+ZBVnFWwVdBV3FYkVjBWRAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAFZM
+</mutableData>
+        </image>
+        <image name="Bat icon" width="709" height="296"/>
+        <image name="CEEEA27F-D819-4C22-BDD2-46B30EE4D200" width="27" height="27">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MjcsIDI3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERPSTU0AKgAAC2wAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhQCBAhUAwcN
+jgQJELkECxPMAwsU1gQLE8wECRC5AwcNjgIECFQAAAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQIdAwcNjwMMFN0DCxTOAggOngEFCWwCBAdTAAQF
+RQIEB1MBBQlsAggOnwMLFM0DDBTdAwcNjwEBAh0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAADCFwFDBTeAgkQtAADBkQAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAkAAwZEAgkQswUMFd4CBAhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwYK
+eQUMFecABAhZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAEB1gFDBbnAwYMewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBQlnBQwV5AECBDMAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgQyBQwV
+5AEFCmkAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAiYDCxblAAMHTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGTAULFeYAAQMnAAAA
+AAAAAAAAAAAAAAAAAAMHDIwECRGyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQJELIDBwyNAAAAAAAAAAAAAAAAAAAB
+CwUKFNcCAwdOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDB00FCxTXAAAACwAAAAAAAAAAAQIDKgUMFNwAAQMfAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAABAx8FDBTcAQIDKgAAAAAAAAAAAQIEMwULFNcAAQIaAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAABAhoFCxTXAQIEMwAAAAAAAAAAAAEDJAMMFN4BAQIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAyMDDBTeAAED
+JAAAAAAAAAAAAAAABQMLEtECBAhaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIECF8DCxPOAAAABgAAAAAAAAAAAAAA
+AAMGC4AEChHAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwQKEsUDBgp4AAAAAAAAAAAAAAAAAAAAAAABAhgFDBTeAQYK
+bwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAQUKbQULFNoAAQIXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwZMBQ0X8AIECFcAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAdXBQwW
+7AADBkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQIVgUMFuYDBgt9AAAAAwAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgMHDIIFDBXqAgQHVQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBj4FDBTgAAABDwAAAAAAAAADAAAABAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAABAABAh0BBQptAwsTzQUKEsYAAwU5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAABAx8EChK/AAAACQAAAAACBAldBAsTywIIDqADBw2JAwYMfAMHDIsCCA6gBAoS
+xQMMFeAEChG8AgQIWwAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAIFCWYDBw2YAAAAAAAAAQwCChHAAwcMkAEGDIkCCA+mBAkQrAQIDqABBw2LAgQIXgEBAygAAAABAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQQKEsMABAhZAgQH
+UQQKEb4DBw2PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIWgULFM8CCA+wAwgOkwADBkwAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgEAAAMAAAABABsAAAEBAAMAAAABABsAAAECAAMA
+AAAEAAAMGgEDAAMAAAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMA
+AAABAAQAAAEWAAMAAAABABsAAAEXAAQAAAABAAALZAEcAAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMA
+AAAEAAAMIodzAAcAAAeoAAAMKgAAAAAACAAIAAgACAABAAEAAQABAAAHqGFwcGwCIAAAbW50clJHQiBY
+WVogB9kAAgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1h
+cHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgA
+AABvZHNjbQAAAXgAAAVsY3BydAAABuQAAAA4d3RwdAAABxwAAAAUclhZWgAABzAAAAAUZ1hZWgAAB0QA
+AAAUYlhZWgAAB1gAAAAUclRSQwAAB2wAAAAOY2hhZAAAB3wAAAAsYlRSQwAAB2wAAAAOZ1RSQwAAB2wA
+AAAOZGVzYwAAAAAAAAAUR2VuZXJpYyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFBy
+b2ZpbGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMA
+AAAAAAAAHgAAAAxza1NLAAAAKAAAAXhockhSAAAAKAAAAaBjYUVTAAAAJAAAAchwdEJSAAAAJgAAAex1
+a1VBAAAAKgAAAhJmckZVAAAAKAAAAjx6aFRXAAAAFgAAAmRpdElUAAAAKAAAAnpuYk5PAAAAJgAAAqJr
+b0tSAAAAFgAAAshjc0NaAAAAIgAAAt5oZUlMAAAAHgAAAwBkZURFAAAALAAAAx5odUhVAAAAKAAAA0pz
+dlNFAAAAJgAAAqJ6aENOAAAAFgAAA3JqYUpQAAAAGgAAA4hyb1JPAAAAJAAAA6JlbEdSAAAAIgAAA8Zw
+dFBPAAAAJgAAA+hubE5MAAAAKAAABA5lc0VTAAAAJgAAA+h0aFRIAAAAJAAABDZ0clRSAAAAIgAABFpm
+aUZJAAAAKAAABHxwbFBMAAAALAAABKRydVJVAAAAIgAABNBhckVHAAAAJgAABPJlblVTAAAAJgAABRhk
+YURLAAAALgAABT4AVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUA
+cgBpAQ0AawBpACAAUgBHAEIAIABwAHIAbwBmAGkAbABQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A
+6AByAGkAYwBQAGUAcgBmAGkAbAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0E
+OAQ5ACAEPwRABD4ERAQwBDkEOwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUA
+IABSAFYAQpAadSgAIABSAEcAQgAggnJfaWPPj/AAUAByAG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4A
+ZQByAGkAYwBvAEcAZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGzHfLwYACAAUgBHAEIA
+INUEuFzTDMd8AE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIA
+RwBCACAF2wXcBdwF2QBBAGwAbABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsAMEA
+bAB0AGEAbADhAG4AbwBzACAAUgBHAEIAIABwAHIAbwBmAGkAbGZukBoAIABSAEcAQgAgY8+P8GWHTvZO
+AIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkA
+YwOTA7UDvQO5A7oDzAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcA
+ZQBuAOkAcgBpAGMAbwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMO
+RA4fDiUOTAAgAFIARwBCACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkA
+bABpAFkAbABlAGkAbgBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBVAG4AaQB3AGUAcgBzAGEA
+bABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBCBB4EMQRJBDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcA
+QgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZEBjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcA
+QgAgAFAAcgBvAGYAaQBsAGUARwBlAG4AZQByAGUAbAAgAFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwA
+cwBldGV4dAAAAABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBY
+WVogAAAAAAAA81IAAQAAAAEWz1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRY
+WVogAAAAAAAAKBoAABWfAAC4NmN1cnYAAAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IA
+AP2R///7ov///aMAAAPcAADAbNIlJicoWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdl
+UmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09iamVjdNIlJi0uV05TQXJyYXmi
+LSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQ
+A4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tleWVkQXJjaGl2ZXLRQEFUcm9v
+dIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCpAKsArQCyALUA
+twC5ALsAvQDCANkA2wDdFLMUuBTDFMwU3xTjFPYVARUKFQ8VFxUaFR8VLhUyFTkVQRVOFVMVVRVXFVwV
+ZBVnFWwVdBV3FYkVjBWRAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAFZM
+</mutableData>
+        </image>
+        <image name="Connexion home" width="448" height="156"/>
+        <image name="Contact us" width="74" height="58"/>
         <image name="Edit image" width="1280" height="2272"/>
+        <image name="F74FA36B-3E4B-4DBB-A95B-89ADA8FCD92E" width="27" height="27">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MjcsIDI3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPERPSTU0AKgAAC2wAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhQCBAhUAwcN
+jgQJELkECxPMAwsU1gQLE8wECRC5AwcNjgIECFQAAAIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQIdAwcNjwMMFN0DCxTOAggOngEFCWwCBAdTAAQF
+RQIEB1MBBQlsAggOnwMLFM0DDBTdAwcNjwEBAh0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAADCFwFDBTeAgkQtAADBkQAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAkAAwZEAgkQswUMFd4CBAhdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwYK
+eQUMFecABAhZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAEB1gFDBbnAwYMewAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBQlnBQwV5AECBDMAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgQyBQwV
+5AEFCmkAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAiYDCxblAAMHTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGTAULFeYAAQMnAAAA
+AAAAAAAAAAAAAAAAAAMHDIwECRGyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQJELIDBwyNAAAAAAAAAAAAAAAAAAAB
+CwUKFNcCAwdOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDB00FCxTXAAAACwAAAAAAAAAAAQIDKgUMFNwAAQMfAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAABAx8FDBTcAQIDKgAAAAAAAAAAAQIEMwULFNcAAQIaAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAABAhoFCxTXAQIEMwAAAAAAAAAAAAEDJAMMFN4BAQIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAyMDDBTeAAED
+JAAAAAAAAAAAAAAABQMLEtECBAhaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIECF8DCxPOAAAABgAAAAAAAAAAAAAA
+AAMGC4AEChHAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwQKEsUDBgp4AAAAAAAAAAAAAAAAAAAAAAABAhgFDBTeAQYK
+bwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAQUKbQULFNoAAQIXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwZMBQ0X8AIECFcAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAdXBQwW
+7AADBkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQIVgUMFuYDBgt9AAAAAwAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgMHDIIFDBXqAgQHVQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBj4FDBTgAAABDwAAAAAAAAADAAAABAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAABAABAh0BBQptAwsTzQUKEsYAAwU5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAABAx8EChK/AAAACQAAAAACBAldBAsTywIIDqADBw2JAwYMfAMHDIsCCA6gBAoS
+xQMMFeAEChG8AgQIWwAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAIFCWYDBw2YAAAAAAAAAQwCChHAAwcMkAEGDIkCCA+mBAkQrAQIDqABBw2LAgQIXgEBAygAAAABAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQQKEsMABAhZAgQH
+UQQKEb4DBw2PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQIWgULFM8CCA+wAwgOkwADBkwAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgEAAAMAAAABABsAAAEBAAMAAAABABsAAAECAAMA
+AAAEAAAMGgEDAAMAAAABAAEAAAEGAAMAAAABAAIAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMA
+AAABAAQAAAEWAAMAAAABABsAAAEXAAQAAAABAAALZAEcAAMAAAABAAEAAAFSAAMAAAABAAEAAAFTAAMA
+AAAEAAAMIodzAAcAAAeoAAAMKgAAAAAACAAIAAgACAABAAEAAQABAAAHqGFwcGwCIAAAbW50clJHQiBY
+WVogB9kAAgAZAAsAGgALYWNzcEFQUEwAAAAAYXBwbAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1h
+cHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALZGVzYwAAAQgA
+AABvZHNjbQAAAXgAAAVsY3BydAAABuQAAAA4d3RwdAAABxwAAAAUclhZWgAABzAAAAAUZ1hZWgAAB0QA
+AAAUYlhZWgAAB1gAAAAUclRSQwAAB2wAAAAOY2hhZAAAB3wAAAAsYlRSQwAAB2wAAAAOZ1RSQwAAB2wA
+AAAOZGVzYwAAAAAAAAAUR2VuZXJpYyBSR0IgUHJvZmlsZQAAAAAAAAAAAAAAFEdlbmVyaWMgUkdCIFBy
+b2ZpbGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMA
+AAAAAAAAHgAAAAxza1NLAAAAKAAAAXhockhSAAAAKAAAAaBjYUVTAAAAJAAAAchwdEJSAAAAJgAAAex1
+a1VBAAAAKgAAAhJmckZVAAAAKAAAAjx6aFRXAAAAFgAAAmRpdElUAAAAKAAAAnpuYk5PAAAAJgAAAqJr
+b0tSAAAAFgAAAshjc0NaAAAAIgAAAt5oZUlMAAAAHgAAAwBkZURFAAAALAAAAx5odUhVAAAAKAAAA0pz
+dlNFAAAAJgAAAqJ6aENOAAAAFgAAA3JqYUpQAAAAGgAAA4hyb1JPAAAAJAAAA6JlbEdSAAAAIgAAA8Zw
+dFBPAAAAJgAAA+hubE5MAAAAKAAABA5lc0VTAAAAJgAAA+h0aFRIAAAAJAAABDZ0clRSAAAAIgAABFpm
+aUZJAAAAKAAABHxwbFBMAAAALAAABKRydVJVAAAAIgAABNBhckVHAAAAJgAABPJlblVTAAAAJgAABRhk
+YURLAAAALgAABT4AVgFhAGUAbwBiAGUAYwBuAP0AIABSAEcAQgAgAHAAcgBvAGYAaQBsAEcAZQBuAGUA
+cgBpAQ0AawBpACAAUgBHAEIAIABwAHIAbwBmAGkAbABQAGUAcgBmAGkAbAAgAFIARwBCACAAZwBlAG4A
+6AByAGkAYwBQAGUAcgBmAGkAbAAgAFIARwBCACAARwBlAG4A6QByAGkAYwBvBBcEMAQzBDAEOwRMBD0E
+OAQ5ACAEPwRABD4ERAQwBDkEOwAgAFIARwBCAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUA
+IABSAFYAQpAadSgAIABSAEcAQgAggnJfaWPPj/AAUAByAG8AZgBpAGwAbwAgAFIARwBCACAAZwBlAG4A
+ZQByAGkAYwBvAEcAZQBuAGUAcgBpAHMAawAgAFIARwBCAC0AcAByAG8AZgBpAGzHfLwYACAAUgBHAEIA
+INUEuFzTDMd8AE8AYgBlAGMAbgD9ACAAUgBHAEIAIABwAHIAbwBmAGkAbAXkBegF1QXkBdkF3AAgAFIA
+RwBCACAF2wXcBdwF2QBBAGwAbABnAGUAbQBlAGkAbgBlAHMAIABSAEcAQgAtAFAAcgBvAGYAaQBsAMEA
+bAB0AGEAbADhAG4AbwBzACAAUgBHAEIAIABwAHIAbwBmAGkAbGZukBoAIABSAEcAQgAgY8+P8GWHTvZO
+AIIsACAAUgBHAEIAIDDXMO0w1TChMKQw6wBQAHIAbwBmAGkAbAAgAFIARwBCACAAZwBlAG4AZQByAGkA
+YwOTA7UDvQO5A7oDzAAgA8ADwQO/A8YDrwO7ACAAUgBHAEIAUABlAHIAZgBpAGwAIABSAEcAQgAgAGcA
+ZQBuAOkAcgBpAGMAbwBBAGwAZwBlAG0AZQBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBlAGwOQg4bDiMO
+RA4fDiUOTAAgAFIARwBCACAOFw4xDkgOJw5EDhsARwBlAG4AZQBsACAAUgBHAEIAIABQAHIAbwBmAGkA
+bABpAFkAbABlAGkAbgBlAG4AIABSAEcAQgAtAHAAcgBvAGYAaQBpAGwAaQBVAG4AaQB3AGUAcgBzAGEA
+bABuAHkAIABwAHIAbwBmAGkAbAAgAFIARwBCBB4EMQRJBDgEOQAgBD8EQAQ+BEQEOAQ7BEwAIABSAEcA
+QgZFBkQGQQAgBioGOQYxBkoGQQAgAFIARwBCACAGJwZEBjkGJwZFAEcAZQBuAGUAcgBpAGMAIABSAEcA
+QgAgAFAAcgBvAGYAaQBsAGUARwBlAG4AZQByAGUAbAAgAFIARwBCAC0AYgBlAHMAawByAGkAdgBlAGwA
+cwBldGV4dAAAAABDb3B5cmlnaHQgMjAwNyBBcHBsZSBJbmMuLCBhbGwgcmlnaHRzIHJlc2VydmVkLgBY
+WVogAAAAAAAA81IAAQAAAAEWz1hZWiAAAAAAAAB0TQAAPe4AAAPQWFlaIAAAAAAAAFp1AACscwAAFzRY
+WVogAAAAAAAAKBoAABWfAAC4NmN1cnYAAAAAAAAAAQHNAABzZjMyAAAAAAABDEIAAAXe///zJgAAB5IA
+AP2R///7ov///aMAAAPcAADAbNIlJicoWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU0JpdG1hcEltYWdl
+UmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09iamVjdNIlJi0uV05TQXJyYXmi
+LSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVcTlNDb2xvclNwYWNlRDAgMAAQ
+A4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tleWVkQXJjaGl2ZXLRQEFUcm9v
+dIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwAjgCXAJwApwCpAKsArQCyALUA
+twC5ALsAvQDCANkA2wDdFLMUuBTDFMwU3xTjFPYVARUKFQ8VFxUaFR8VLhUyFTkVQRVOFVMVVRVXFVwV
+ZBVnFWwVdBV3FYkVjBWRAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAFZM
+</mutableData>
+        </image>
         <image name="Facebook connexion" width="872" height="168"/>
         <image name="Facebook inscription" width="872" height="168"/>
         <image name="Home-icon" width="30" height="30"/>
@@ -5203,8 +5164,8 @@ ISMuIzMjNSM3IzwjRCNHI0wjVCNXI2kjbCNxAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAI3M
         <image name="Publish white" width="70" height="31"/>
         <image name="Rectangle sel" width="640" height="154"/>
         <image name="Settings" width="1280" height="2272"/>
-        <image name="Settings-icon" width="84" height="84"/>
         <image name="Share" width="27" height="27"/>
+        <image name="SideMenu_aide" width="196" height="196"/>
         <image name="commentaire" width="27" height="27"/>
         <image name="envoyer" width="70" height="29"/>
         <image name="list" width="16" height="16"/>
@@ -5215,6 +5176,6 @@ ISMuIzMjNSM3IzwjRCNHI0wjVCNXI2kjbCNxAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAAAAAAI3M
         <image name="upvote" width="35" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Wlf-3l-4Cx"/>
+        <segue reference="y7M-d8-pHn"/>
     </inferredMetricsTieBreakers>
 </document>

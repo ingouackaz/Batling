@@ -57,12 +57,12 @@ class ProfileVC: UIViewController , UITableViewDataSource, UITableViewDelegate, 
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if(section == 2){
+        if(section == 1){
             return 4
         }
         else {
@@ -74,18 +74,16 @@ class ProfileVC: UIViewController , UITableViewDataSource, UITableViewDelegate, 
 
         
         if(indexPath.section == 0){
-            var cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell", forIndexPath: indexPath) as! UITableViewCell
-
-            return cell
-        }
-        else if (indexPath.section == 1){
-            var cell = tableView.dequeueReusableCellWithIdentifier("BarCell", forIndexPath: indexPath) as! BarCell
+            var cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell", forIndexPath: indexPath) as! BarCell
             cell.configureCell()
+            cell.delegate = self
             cell.activityButton.selected = _isInActivity
             cell.batsButton.selected = !_isInActivity
-            cell.delegate = self
+            cell.separatorInset = UIEdgeInsetsMake(0, 1000, 0, cell.bounds.size.width)
             return cell
         }
+
+
         else {
             
             if (_isInActivity == true){
