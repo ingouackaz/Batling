@@ -13,6 +13,8 @@ class NewPunchlineVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var punchlineTextView: SZTextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        punchlineTextView.layer.borderWidth = 1.0
+        punchlineTextView.layer.borderColor = UIColor.blackColor().CGColor
         punchlineTextView.becomeFirstResponder()
 
         // Do any additional setup after loading the view.

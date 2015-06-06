@@ -11,19 +11,31 @@ import UIKit
 class NewMemeVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var upTextView: SZTextView!
-    @IBOutlet weak var downTextView: SZTextView!
     
+
     @IBOutlet weak var imageView: UIImageView!
     var kbHeight: CGFloat!
     var _kbIsUp : Bool = false
+    var _photoTaken : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.addTextButton.selected = false
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet weak var addTextButton: UIButton!
+    
+
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        if (_photoTaken == true){
+            self.addTextButton.selected = true
+
+        }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
@@ -32,7 +44,6 @@ class NewMemeVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         upTextView.resignFirstResponder()
-        downTextView.resignFirstResponder()
 
         
     }
@@ -75,7 +86,6 @@ class NewMemeVC: UIViewController, UINavigationControllerDelegate, UIImagePicker
 
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         upTextView.resignFirstResponder()
-        downTextView.resignFirstResponder()
 
     }
     
