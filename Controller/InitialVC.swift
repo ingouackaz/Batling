@@ -32,6 +32,14 @@ class InitialVC: UIViewController {
         
     }
 
+    @IBAction func signUpAction(sender: AnyObject) {
+        FBSDKAppEvents.logEvent(batEventSignUpPressed)
+    }
+    
+    @IBAction func signInAction(sender: AnyObject) {
+        FBSDKAppEvents.logEvent(batEventSignInPressed)
+
+    }
     /*
     // MARK: - Navigation
 

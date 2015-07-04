@@ -18,12 +18,22 @@ class NewBatVC: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var publishButton: UIBarButtonItem!
     
-    var _orangeVC : UIViewController?
-    var _purpleVC : UIViewController?
+    var _orangeVC : NewPunchlineVC?
+    var _purpleVC : NewMemeVC?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+
+        
+        /*
+        [DZNPhotoPickerController registerService:DZNPhotoPickerControllerServiceFlickr
+            consumerKey:YOUR_Flickr_KEY
+            consumerSecret:YOUR_Flickr_SECRET
+            subscription:DZNPhotoPickerControllerSubscriptionFree];*/
+        
         publishButton.image = UIImage(named: "Publier")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
 
 
@@ -34,10 +44,10 @@ class NewBatVC: UIViewController {
         memeButton.selected = true
 
 
-        _orangeVC = self.storyboard?.instantiateViewControllerWithIdentifier("orangeVC") as? UIViewController
-        _purpleVC = self.storyboard?.instantiateViewControllerWithIdentifier("purpleVC") as? UIViewController
+        _orangeVC = self.storyboard?.instantiateViewControllerWithIdentifier("orangeVC") as? NewPunchlineVC
+        _purpleVC = self.storyboard?.instantiateViewControllerWithIdentifier("purpleVC") as? NewMemeVC
         
-        activeViewController = _orangeVC
+        activeViewController = _purpleVC
 
 
     }
@@ -59,15 +69,24 @@ class NewBatVC: UIViewController {
 
     @IBAction func punchlineButtonPressed(sender: AnyObject) {
         
-        punchlineButton.selected = false
-        memeButton.selected = true
+        punchlineButton.selected = true
+        memeButton.selected = false
         
-       // self = NSBundle.mainBundle().loadNibNamed("ViewDetailMenu", owner: 0, options: nil)[0] as? UIView
-
         
         activeViewController = _orangeVC
+        FBSDKAppEvents.logEvent(batEventPunchlineCategorySelected)
 
         //self.tableView.reloadData()
+    }
+    
+    @IBAction func memeButtonPressed(sender: AnyObject) {
+        punchlineButton.selected = false
+        memeButton.selected = true
+        //self.tableView.reloadData()
+        activeViewController = _purpleVC
+        FBSDKAppEvents.logEvent(batEventMemeCategorySelected)
+        
+        
     }
     
     
@@ -75,21 +94,102 @@ class NewBatVC: UIViewController {
     
     @IBAction func publishAction(sender: AnyObject) {
 
-       self.performSegueWithIdentifier("backToTBVC", sender: nil)
-       // self.dismissViewControllerAnimated(true, completion: nil)
+        // inversé
+        if(memeButton.selected == true){
+            self.publishMeme()
+            FBSDKAppEvents.logEvent(batEventImageBatJokePublished)
+
+            
+        }
+        else{
+            self.publishPunchline()
+            FBSDKAppEvents.logEvent(batEventPunchlineBatJokePublished)
+        }
         
     }
     
-    @IBAction func memeButtonPressed(sender: AnyObject) {
-        punchlineButton.selected = true
-        memeButton.selected = false
-        //self.tableView.reloadData()
-        activeViewController = _purpleVC
+    func publishPunchline(){
+        
+        
+        if (_orangeVC!.punchlineTextView.text != ""){
+            _orangeVC!.punchlineTextView.resignFirstResponder()
+            
+            var batjoke : PFObject = PFObject(className: kPBatJokeClassKey)
+            batjoke.setObject(PFUser.currentUser()!, forKey: kPBatJokeUserKey)
+            batjoke.setObject(kPBatJokeTypePunchline, forKey: kPBatJokeTypeKey)
+            batjoke.setObject(_orangeVC!.punchlineTextView.text, forKey: kPBatJokeTypePunchlineTextKey)
+            BatlingSingleton.sharedInstance.startLoading(self.view, text: "")
+            batjoke.saveInBackgroundWithBlock { (succeeded, error) -> Void in
+                BatlingSingleton.sharedInstance.stopLoading()
+                
+                if(succeeded == true){
+                    println("photo uploaded")
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                    
+                }
+                else{
+                    var errorString =  (error!.userInfo?["error"] as? NSString) as! String
+                    BatlingSingleton.sharedInstance.displayAlertWithText(self, text: errorString)
+                }
+            }
+        }
+        else{
+            BatlingSingleton.sharedInstance.displayAlertWithText(self, text: "Veuillez entrez du texte")
 
+        }
+        
     }
+    
+    func publishMeme(){
+        
+        
+        if (_purpleVC!._photoTaken == true){
+            
+            if(_purpleVC!.upTextView.text == ""){
+            _purpleVC!.upTextView.hidden = true
+            }
+            _purpleVC!.upTextView.resignFirstResponder()
+
+            var resizedImage = UIImage(view: _purpleVC!.memeView)
+            var imageData =  UIImageJPEGRepresentation(resizedImage, 0.7)
+            
+            
+            var pictureFile = PFFile(data:imageData)
+
+            
+            
+            var batjoke : PFObject = PFObject(className: kPBatJokeClassKey)
+            batjoke.setObject(PFUser.currentUser()!, forKey: kPBatJokeUserKey)
+            batjoke.setObject(kPBatJokeTypeMeme, forKey: kPBatJokeTypeKey)
+            batjoke.setObject(pictureFile, forKey: kPBatJokeTypeMemeImageKey)
+            BatlingSingleton.sharedInstance.startLoading(self.view, text: "")
+            batjoke.saveInBackgroundWithBlock { (succeeded, error) -> Void in
+                BatlingSingleton.sharedInstance.stopLoading()
+                
+                if(succeeded == true){
+                    println("photo uploaded")
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                    
+                }
+                else{
+                    var errorString =  (error!.userInfo?["error"] as? NSString) as! String
+                    BatlingSingleton.sharedInstance.displayAlertWithText(self, text: errorString)
+                }
+            }
+        }
+        else{
+            BatlingSingleton.sharedInstance.displayAlertWithText(self, text: "Veuillez selectionner une photos")
+        }
+        
+        
+    }
+    
+
 
 
     @IBAction func leaveAction(sender: AnyObject) {
+        FBSDKAppEvents.logEvent(batEventBatJokeCanceled)
+
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }

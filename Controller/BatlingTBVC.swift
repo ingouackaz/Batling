@@ -64,6 +64,8 @@ class BatlingTBVC: UITabBarController , UITabBarControllerDelegate{
 
         var BatVc = storyboard.instantiateViewControllerWithIdentifier("batNC") as! UINavigationController
         
+        FBSDKAppEvents.logEvent(batEventAddBatPressed)
+
         self.presentViewController(BatVc, animated: true, completion: nil)
        // self.selectedIndex = 1
     

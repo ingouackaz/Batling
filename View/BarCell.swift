@@ -11,7 +11,7 @@ import UIKit
 
 protocol BarCellDelegate{
     func batsButtonPressed(cell:BarCell)
-    func activityButtonPressed(ell:BarCell)
+    func activityButtonPressed(cell:BarCell)
 }
 
 
@@ -22,8 +22,10 @@ class BarCell: UITableViewCell {
         // Initialization code
     }
 
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var batsButton: UIButton!
     @IBOutlet weak var activityButton: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var delegate:BarCellDelegate? = nil
 
@@ -47,6 +49,41 @@ class BarCell: UITableViewCell {
         
         self.layoutMargins = UIEdgeInsetsZero;
         self.preservesSuperviewLayoutMargins = false;
+        
+        var user = PFUser.currentUser()! as PFUser
+        self.usernameLabel.text = PFUser.currentUser()?.objectForKey("name") as? String
+        
+        var query : PFQuery =  PAPUtility.queryForActivitiesOnUser(PFUser.currentUser())
+        
+        
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if (error != nil){
+                
+            }
+            else{
+                var dislikersCount = 0
+                var likersCount = 0
+                
+                for(index, activity) in enumerate(objects as! Array<PFObject>){
+                    
+                    if((activity as PFObject).objectForKey(kPAPActivityTypeKey) as! String == kPAPActivityTypeDislike){
+                        dislikersCount++
+                    }
+                    // like
+                    if((activity as PFObject).objectForKey(kPAPActivityTypeKey) as! String == kPAPActivityTypeLike){
+                        
+                        likersCount++
+                    }
+                }
+                println("likers count \(likersCount) && \(dislikersCount)")
+                var batscore = likersCount - dislikersCount
+                self.scoreLabel.text = String(batscore)
+
+                
+            }
+        }
+        
+        
     }
 
     
@@ -55,7 +92,6 @@ class BarCell: UITableViewCell {
         
         if (delegate != nil){
             delegate!.batsButtonPressed(self)
-
         }
  
     }

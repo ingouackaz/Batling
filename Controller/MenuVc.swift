@@ -42,6 +42,33 @@ class MenuVc: AMSlideMenuLeftTableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.row == 2){
+            PFUser.logOutInBackgroundWithBlock { (error) -> Void in
+                PFQuery.clearAllCachedResults()
+                FBSDKAppEvents.logEvent(batEventLogoutPressed)
+
+                self.exitLoginMode()
+
+            }
+        }
+    }
+    
+    
+    func exitLoginMode(){
+        
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var loginNC = storyboard.instantiateViewControllerWithIdentifier("LoginNC") as! UINavigationController
+        
+        
+        var appD = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        appD.window!.rootViewController = storyboard.instantiateViewControllerWithIdentifier("LoginNC") as! UINavigationController
+        
+        //self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     // MARK: - Table view data source
 
 

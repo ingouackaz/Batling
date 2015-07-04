@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Bolts
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +18,99 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Enable storing and querying data from Local Datastore.
+        // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
+        
+        // [application setStatusBarStyle:UIStatusBarStyleLightContent];
+        application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        // UINavigationBar.appearance().barTintColor =  UIColor(hexString: "446CB3")
+        
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        Parse.enableLocalDatastore()
+        FBSDKAppEvents.activateApp()
+//        [FBSDKAppEvents activateApp];
+
+        //FBSDKSettings.setAppID("1605165749731953")
+      //  var sharedInstance = TrendsAppSingleton.sharedInstance
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.grayColor()], forState:.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Selected)
+        
+        // ****************************************************************************
+        // Uncomment this line if you want to enable Crash Reporting
+        // ParseCrashReporting.enable()
+        //
+        // Uncomment and fill in with your Parse credentials:
+        Parse.setApplicationId("PDencx4toq8VUubdxU7RuxSkQK9PQNP0yey3GNev", clientKey: "vrzRo7wA1YBx1Wyg21rMFOed3UVFbyzryRx50hSK")
+        //
+        // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
+        // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
+        // Uncomment the line inside ParseStartProject-Bridging-Header and the following line here:
+        // PFFacebookUtils.initializeFacebook()
+        
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        
+        // ****************************************************************************
+        
+        
+        let defaultACL = PFACL();
+        
+        // If you would like all objects to be private by default, remove this line.
+        defaultACL.setPublicReadAccess(true)
+        
+        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
+        /*
+        if application.applicationState != UIApplicationState.Background {
+        // Track an app open here if we launch with a push, unless
+        // "content_available" was used to trigger a background push (introduced in iOS 7).
+        // In that case, we skip tracking here to avoid double counting the app-open.
+        
+        let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
+        let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")
+        var noPushPayload = false;
+        if let options = launchOptions {
+        noPushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil;
+        }
+        if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        }
+        }
+        if application.respondsToSelector("registerUserNotificationSettings:") {
+        let userNotificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
+        application.registerUserNotificationSettings(settings)
+        application.registerForRemoteNotifications()
+        } else {
+        
+        let types = UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound
+        application.registerForRemoteNotificationTypes(types)
+        }
+        
+        */
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var loginNC = storyboard.instantiateViewControllerWithIdentifier("LoginNC") as! UINavigationController
+        
+        if(PFUser.currentUser() != nil){
+            self.window!.rootViewController = storyboard.instantiateInitialViewController() as! UINavigationController
+        }
+        else{
+            PFUser.currentUser()?.fetchIfNeededInBackground()
+            self.window!.rootViewController = loginNC
+        }
+        //println("user \(PFUser.currentUser())")
+        
+        
         return true
+    }
+    
+    func application(application: UIApplication,
+        openURL url: NSURL,
+        sourceApplication: String?,
+        annotation: AnyObject?) -> Bool {
+            return FBSDKApplicationDelegate.sharedInstance().application(application,
+                openURL: url,
+                sourceApplication: sourceApplication,
+                annotation: annotation)
     }
 
     func applicationWillResignActive(application: UIApplication) {

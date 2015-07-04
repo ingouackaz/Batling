@@ -2,7 +2,7 @@
 //  HelpVC.swift
 //  Batling
 //
-//  Created by Ingouackaz on 2015-06-02.
+//  Created by Ingouackaz on 2015-07-04.
 //  Copyright (c) 2015 Ingouackaz. All rights reserved.
 //
 
@@ -12,13 +12,14 @@ class HelpVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationController?.navigationBar.tintColor =  UIColor(hexString: "061242")
         
+        FBSDKAppEvents.logEvent(batEventHelpPressed)
+
         let titleDict: NSDictionary = [NSForegroundColorAttributeName:  UIColor(hexString: "46E0B5")]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict as [NSObject : AnyObject]
         // Do any additional setup after loading the view.
-    }
-    @IBAction func leaveAction(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
